@@ -1,0 +1,117 @@
+from pathlib import Path
+import json
+import sqlite3
+
+import pandas as pd
+from prepare import ROOT, TABLES, REPORTS, dump, write_csv
+
+EXTERNAL = ROOT/'data/external'
+ONTONG = 'https://www.youthcenter.go.kr/youthPolicy/ythPlcyInfoMain'
+WORK = 'https://m.work24.go.kr'
+DATE = '2026-11-09'
+
+
+def policy(policy_id, name, category, content, ages, income, job, special, exclusion, period, method, url, agency,
+           *, region='ALL', education='공식 안내 참조', marital='별도 조건 확인', candidate='운영기관 자료에서 보완', status='제도 안내 확인', target, **extra):
+    return dict(policy_id=policy_id,policy_name=name,category=category,support_content=content,
+                operating_period=extra.pop('operating_period','제도 운영 안내 확인. 개별 일정은 신청처 기준'),
+                application_period=period,age_min=ages[0],age_max=ages[1],marital_condition=marital,region=region,
+                income_condition=income,education_condition=education,major_condition='전공별 일괄 필터 미적용',
+                employment_condition=job,special_condition=special,exclusion_condition=exclusion,
+                application_method=method,official_url=url,managing_agency=agency,verified_at=DATE,
+                discovery_url=ONTONG if candidate=='온통청년' else extra.pop('discovery_url',None), discovery_route=candidate,
+                verification_status=status,target_summary=target,display=extra.pop('display',True),**extra)
+
+
+def policies():
+    return [
+        policy('national-employment','국민취업지원제도 · 청년 선발형','study',
+               '취업지원 서비스와 Ⅰ유형 요건 충족 시 월 60만 원씩 6개월의 구직촉진수당을 안내합니다.',
+               (15,34),'청년 선발형 기준 중위소득 120% 이하, 가구 재산 5억 원 이하','구직 의사와 취업지원 필요성을 심사',
+               '병역기간에 따른 연령 예외 및 유형별 추가 요건 확인','직접일자리 참여·실업급여 등 제한과 예산에 따른 선발 여부 확인',
+               '고용24 신청 메뉴에서 현재 접수 확인','고용24 온라인 또는 관할 고용센터',
+               WORK+'/ua/z/z/1300/selectEmssRqutIntro.do','고용노동부·고용센터',candidate='온통청년',
+               income_type='median_income',income_max=120,target='청년 선발형 만 15–34세, 소득·재산 등 심사'),
+        policy('youth-challenge','청년도전지원사업','study','상담·진로탐색·취업역량 강화 프로그램 및 과정별 수당과 인센티브를 제공합니다.',
+               (18,34),'공통 소득 상한은 제도 안내 기준 별도 확인','구직단념 유형은 최근 6개월 취업·교육·훈련 이력 등을 확인',
+               '구직단념 상담 문답 및 자립준비청년 등 별도 유형과 지역 특화 예외','의무복무 예정, 중복 참여 등 제한 조건 공고 참조',
+               '2026년 지자체 및 회차별. 현재 모집은 해당 기관 공고 확인','고용24 및 지역 운영기관',
+               'https://www.moel.go.kr/news/notice/noticeView.do?bbs_seq=20260200780','고용노동부·선정 지자체',candidate='온통청년',
+               status='2026 운영기관 공고 확인 · 개인 접수 회차 별도',target='만 18–34세 구직단념청년 등. 지역·특화유형 예외 있음',
+               detail_url='https://www.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systId=SI00000319'),
+        policy('training-card','국민내일배움카드','study','직업훈련비를 5년간 300만~500만 원 한도에서 지원합니다. 과정별 본인 부담이 있을 수 있습니다.',
+               (None,None),'고소득 근로자·자영업자 등 일부 제외','재직·구직 모두 가능하며 제외 직군 확인',
+               '과정별 자부담 및 추가지원 조건 확인','공무원·사립학교 교직원·만 75세 이상 등 발급 제한',
+               '고용24 발급 신청과 과정별 모집 일정 확인','고용24 또는 고용센터',
+               WORK+'/hr/h/a/1100/selectIssuGudn.do','고용노동부·고용센터',education='재학생은 졸업까지 남은 수업연한 등 확인',
+               target='직업훈련 희망자. 소득·직군·재학 조건에 따라 발급 제한'),
+        policy('labor-counsel','고용노동부 1350 근로시간 상담','work','근로시간·휴일·임금 등 근로기준 관련 상담을 제공합니다.',
+               (None,None),'별도 소득 심사 안내 없음','근로자 및 고용노동 제도 문의자',
+               '국번 없이 1350, 유료 전화','상담 내용과 실제 적용은 근로계약 및 상황에 따라 달라질 수 있음',
+               '전화 상담 평일 09:00–18:00','1350 또는 공식 상담센터',
+               'https://1350.moel.go.kr/home/hp/ch/callchat.do','고용노동부 고객상담센터',target='근로시간·휴일 등 관련 제도를 문의하려는 사람'),
+        policy('kpass','K-패스 · 청년 유형','commute','대중교통비를 환급합니다. 2026년 청년 기본형 정률 환급 30% 및 카드 유형별 기준을 확인할 수 있습니다.',
+               (19,34),'청년 유형은 연령 기준. 저소득 유형은 별도','취업 상태와 무관',
+               'K-패스 카드와 회원등록, 주민등록지 및 이용 조건 확인','교통수단·이용조건·참여 지자체는 공식 안내 확인',
+               '카드 발급 및 가입 방식은 공식 페이지에서 확인','K-패스 공식 앱·누리집에서 가입 및 카드 등록',
+               'https://www.korea.kr/news/policyNewsView.do?newsId=148958934','국토교통부·대도시권광역교통위원회',
+               region='참여 지자체',target='만 19–34세 청년 유형. 참여 지자체 및 이용 조건 확인',detail_url='https://korea-pass.kr/'),
+        policy('happy-housing','LH 행복주택 · 청년 계층','commute','대중교통과 생활 접근성을 고려한 공공임대주택의 모집 공고를 확인할 수 있습니다.',
+               (19,39),'소득·자산 기준은 계층과 공고별 확인','사회초년생 트랙 등 공고별 차이',
+               '무주택·청년/사회초년생 구분, 지역 및 소득·자산 심사','입주자 모집공고의 중복입주 및 기타 제한 확인',
+               '단지별 모집공고에 따름','LH청약플러스에서 모집공고 조회',
+               'https://www.lh.or.kr/menu.es?mid=a10401020100','한국토지주택공사',region='단지별',marital='청년 계층은 미혼 기준 확인',
+               target='청년·사회초년생 등 무주택 요건 해당자. 모집 공고별 조건 확인',detail_url='https://apply.lh.or.kr/'),
+        policy('idolbom','아이돌봄서비스 · 시간제','care','아이돌보미가 가정을 방문해 돌봄을 제공합니다. 시간제 기본형 기본요금은 시간당 12,790원이며 정부지원에 따라 본인부담이 달라집니다.',
+               (None,None),'정부지원 소득유형 및 이용요금표 확인','정부지원은 양육 공백 등 별도 요건 심사',
+               '생후 3개월 이상~만 12세 이하 아동의 보호자','다른 돌봄과의 중복 지원 및 시간 제한 확인',
+               '거주지 제공기관 일정 및 돌보미 연계 가능 여부 확인','정부지원 판정 후 아이돌봄 누리집에서 신청',
+               'https://idolbom.go.kr/front/biz/srvcGuide','아이돌봄서비스·지역 제공기관',target='생후 3개월~만 12세 아동 가정. 정부지원은 별도 심사'),
+        policy('childcare-hours','육아기 근로시간 단축','care','육아를 위해 근로시간 단축을 신청하는 제도입니다. 고용보험 급여 요건은 근로시간 단축 신청과 따로 확인합니다.',
+               (None,None),'별도 가구소득 요건 안내 없음','대상 자녀를 둔 근로자',
+               '만 12세 이하 또는 초등학교 6학년 이하 자녀. 급여 요건 별도','계속 근로기간 및 대체인력 등 법정 예외 확인',
+               '회사 신청 절차 및 급여 신청 기한은 공식 안내 확인','회사에 신청 후 급여는 고용24 등에서 신청',
+               WORK+'/cm/c/f/1100/selecSystInfo.do?systId=SI00000397','고용노동부·고용센터',target='만 12세 이하 또는 초등학교 6학년 이하 자녀를 둔 근로자'),
+        policy('worker-health-center','안전보건공단 근로자건강센터 안내','sleep',
+               '수면 부족 등 건강 신호가 있을 때 근로자 건강상담·건강관리 지원 정보를 확인할 수 있습니다.',
+               (None,None),'별도 소득 심사 안내 없음','근로 여부 및 이용 가능 대상은 운영기관 안내 확인',
+               '지역별 센터와 제공 서비스 확인','센터별 이용 대상·운영 방식이 다를 수 있음',
+               '센터별 운영시간과 이용방법 확인','운영기관 안내에서 가까운 센터와 이용방법 확인',
+               'https://oshri.kosha.or.kr/kosha/intro/gyeonggiBranch_A.do?articleNo=351348&attachNo=198568&mode=download',
+               '한국산업안전보건공단',candidate='운영기관 자료에서 보완',target='수면 부족 등 건강관리가 필요한 근로자 및 이용 가능 대상'),
+        policy('sleep-information','수면 관리 정보','sleep',
+               '적정 수면시간과 수면 건강관리에 관한 공신력 있는 정보를 확인할 수 있습니다.',
+               (None,None),'소득 조건 없음','취업 상태와 무관',
+               '의학적 진단이나 치료를 대신하지 않는 일반 정보','증상이 지속되면 의료전문가 상담 필요',
+               '상시 열람','공식 안내 페이지에서 확인',
+               'https://www.cdc.gov/sleep/about/','미국 질병통제예방센터(CDC)',candidate='운영기관 자료에서 보완',target='수면 건강정보가 필요한 사람'),
+    ]
+
+
+def build():
+    rows=policies()
+    assert len({p['policy_id'] for p in rows})==len(rows)
+    assert all(p['official_url'].startswith('https://') for p in rows)
+    EXTERNAL.mkdir(parents=True,exist_ok=True)
+    dump(rows,EXTERNAL/'policies.json')
+    table=pd.DataFrame(rows)
+    write_csv(table,EXTERNAL/'policies.csv')
+    db=EXTERNAL/'policies.sqlite'
+    with sqlite3.connect(db) as con:
+        table.to_sql('policies',con,index=False,if_exists='replace')
+        con.execute('CREATE UNIQUE INDEX policy_id_idx ON policies(policy_id)')
+    write_csv(table.groupby(['region','category']).size().rename('policies').reset_index(),TABLES/'policy_coverage.csv')
+    summary=json.loads((REPORTS/'results_summary.json').read_text(encoding='utf-8'))
+    cluster=json.loads((ROOT/'outputs/models/cluster.json').read_text(encoding='utf-8'))
+    profile=pd.read_csv(TABLES/'clusters_profiles.csv').query("method=='standardized'")
+    coda=pd.read_csv(TABLES/'coda_reallocation.csv').query("method=='positive_support'").dropna()
+    payload={'benchmark':summary['benchmark'],'cutoff':summary['cutoff'],'groups':summary['groups'],
+             'signal_type_benchmarks':summary['signal_type_benchmarks'],
+             'cluster':cluster,'profiles':profile.to_dict('records'),'coda':coda.to_dict('records'),'policies':rows}
+    data=json.dumps(payload,ensure_ascii=False,separators=(',',':'),allow_nan=False).replace('<','\\u003c')
+    template=(ROOT/'app/template.html').read_text(encoding='utf-8')
+    (ROOT/'app/index.html').write_text(template.replace('__PAYLOAD__',data),encoding='utf-8')
+
+
+if __name__=='__main__':
+    build()

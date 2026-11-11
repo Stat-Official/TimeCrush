@@ -1,0 +1,2302 @@
+{
+  "file": "timeuse2024.csv",
+  "format": "CSV",
+  "encoding": "CP949",
+  "sha256": "14cd57847b2fa0b23ba97d45834725afd16cfce5b89b2d80a65303c747af1cb2",
+  "rows": 50194,
+  "columns": 304,
+  "persons": 25097,
+  "households": 12718,
+  "duplicate_rows": 0,
+  "duplicate_person_weekday_code": 0,
+  "weekday_rows": 30127,
+  "youth_all_days": 8106,
+  "youth_weekday_before_completeness": 4925,
+  "incomplete_rows": 27,
+  "incomplete_youth_weekday": 5,
+  "valid_youth_weekday": 4920,
+  "valid_youth_persons": 3255,
+  "valid_youth_persons_diaries_count": {
+    "2": 1665,
+    "1": 1590
+  },
+  "weight_min": 32.303008049902,
+  "weight_max": 5268.23426022072,
+  "weight_sum_all": 46269984.99999997,
+  "weight_sum_sample": 6729906.8405796755,
+  "main_codes": 116,
+  "simultaneous_codes": 116,
+  "activity_totals": {
+    "1440": 50167,
+    "1340": 3,
+    "1280": 3,
+    "1330": 3,
+    "1380": 3,
+    "1070": 2,
+    "1350": 2,
+    "1100": 1,
+    "1170": 1,
+    "1310": 1,
+    "1230": 1,
+    "1320": 1,
+    "1200": 1,
+    "1290": 1,
+    "1270": 1,
+    "1410": 1,
+    "1010": 1,
+    "1150": 1
+  },
+  "column_inventory": [
+    {
+      "column": "회차",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 4
+    },
+    {
+      "column": "행정구역시도코드",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 17
+    },
+    {
+      "column": "읍면부동부코드",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 2
+    },
+    {
+      "column": "가구일련번호",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 12718
+    },
+    {
+      "column": "가구원일련번호",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 7
+    },
+    {
+      "column": "대표가구원여부",
+      "dtype": "object",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 2
+    },
+    {
+      "column": "요일구분코드",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 7
+    },
+    {
+      "column": "평토일구분코드",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 3
+    },
+    {
+      "column": "전체가구원수",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 8
+    },
+    {
+      "column": "돌봄필요가구원수",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 3
+    },
+    {
+      "column": "10세미만가구원수",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 5
+    },
+    {
+      "column": "미취학가구원수",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 4
+    },
+    {
+      "column": "18세미만자녀수",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 5
+    },
+    {
+      "column": "미취학자녀수",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 4
+    },
+    {
+      "column": "농가구분코드",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 2
+    },
+    {
+      "column": "가구주관계코드",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 9
+    },
+    {
+      "column": "성별코드",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 2
+    },
+    {
+      "column": "만연령",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 92
+    },
+    {
+      "column": "연령코드",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 8
+    },
+    {
+      "column": "혼인상태코드",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 4
+    },
+    {
+      "column": "가구특성_고령자가구구분코드",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 6
+    },
+    {
+      "column": "가구특성_외벌이맞벌이가구구분코드",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 9
+    },
+    {
+      "column": "가구특성_한부모양부모조손가구구분코드",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 7
+    },
+    {
+      "column": "가구특성_돌봄가구구분코드",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 2
+    },
+    {
+      "column": "돌봄필요사유코드",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 6
+    },
+    {
+      "column": "오후돌봄구분코드",
+      "dtype": "float64",
+      "missing": 43988,
+      "blank_whitespace": 0,
+      "distinct": 47
+    },
+    {
+      "column": "분가가족관계코드1",
+      "dtype": "float64",
+      "missing": 45460,
+      "blank_whitespace": 0,
+      "distinct": 2
+    },
+    {
+      "column": "분가가족사유코드1",
+      "dtype": "float64",
+      "missing": 45460,
+      "blank_whitespace": 0,
+      "distinct": 6
+    },
+    {
+      "column": "분가가족관계코드2",
+      "dtype": "float64",
+      "missing": 48694,
+      "blank_whitespace": 0,
+      "distinct": 2
+    },
+    {
+      "column": "분가가족사유코드2",
+      "dtype": "float64",
+      "missing": 48694,
+      "blank_whitespace": 0,
+      "distinct": 5
+    },
+    {
+      "column": "분가가족관계코드3",
+      "dtype": "float64",
+      "missing": 49884,
+      "blank_whitespace": 0,
+      "distinct": 2
+    },
+    {
+      "column": "분가가족사유코드3",
+      "dtype": "float64",
+      "missing": 49884,
+      "blank_whitespace": 0,
+      "distinct": 5
+    },
+    {
+      "column": "분가가족관계코드4",
+      "dtype": "float64",
+      "missing": 50148,
+      "blank_whitespace": 0,
+      "distinct": 2
+    },
+    {
+      "column": "분가가족사유코드4",
+      "dtype": "float64",
+      "missing": 50148,
+      "blank_whitespace": 0,
+      "distinct": 3
+    },
+    {
+      "column": "분가가족관계코드5",
+      "dtype": "float64",
+      "missing": 50184,
+      "blank_whitespace": 0,
+      "distinct": 2
+    },
+    {
+      "column": "분가가족사유코드5",
+      "dtype": "float64",
+      "missing": 50184,
+      "blank_whitespace": 0,
+      "distinct": 2
+    },
+    {
+      "column": "주택종류코드",
+      "dtype": "float64",
+      "missing": 24758,
+      "blank_whitespace": 0,
+      "distinct": 5
+    },
+    {
+      "column": "주택면적",
+      "dtype": "float64",
+      "missing": 24758,
+      "blank_whitespace": 0,
+      "distinct": 244
+    },
+    {
+      "column": "주택임대종류코드",
+      "dtype": "float64",
+      "missing": 24758,
+      "blank_whitespace": 0,
+      "distinct": 5
+    },
+    {
+      "column": "가구총소득구간코드",
+      "dtype": "float64",
+      "missing": 24758,
+      "blank_whitespace": 0,
+      "distinct": 11
+    },
+    {
+      "column": "시가간부족정도코드",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 4
+    },
+    {
+      "column": "시간부족_줄이고싶은일코드",
+      "dtype": "float64",
+      "missing": 25938,
+      "blank_whitespace": 0,
+      "distinct": 7
+    },
+    {
+      "column": "피곤함정도코드",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 4
+    },
+    {
+      "column": "피곤사유코드",
+      "dtype": "float64",
+      "missing": 13628,
+      "blank_whitespace": 0,
+      "distinct": 8
+    },
+    {
+      "column": "삶만족도코드",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 5
+    },
+    {
+      "column": "여가만족코드",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 5
+    },
+    {
+      "column": "가사분담만족도코드",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 6
+    },
+    {
+      "column": "남자일여자가정견해코드",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 4
+    },
+    {
+      "column": "교육정도코드",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 8
+    },
+    {
+      "column": "교육재학코드",
+      "dtype": "float64",
+      "missing": 1038,
+      "blank_whitespace": 0,
+      "distinct": 5
+    },
+    {
+      "column": "경제활동상태코드",
+      "dtype": "float64",
+      "missing": 2718,
+      "blank_whitespace": 0,
+      "distinct": 3
+    },
+    {
+      "column": "무직사유코드",
+      "dtype": "float64",
+      "missing": 32150,
+      "blank_whitespace": 0,
+      "distinct": 8
+    },
+    {
+      "column": "산업분류코드",
+      "dtype": "object",
+      "missing": 20762,
+      "blank_whitespace": 0,
+      "distinct": 21
+    },
+    {
+      "column": "사업형태코드",
+      "dtype": "float64",
+      "missing": 20762,
+      "blank_whitespace": 0,
+      "distinct": 2
+    },
+    {
+      "column": "직업분류코드",
+      "dtype": "object",
+      "missing": 20762,
+      "blank_whitespace": 0,
+      "distinct": 10
+    },
+    {
+      "column": "종사상지위코드",
+      "dtype": "float64",
+      "missing": 20762,
+      "blank_whitespace": 0,
+      "distinct": 6
+    },
+    {
+      "column": "취업형태코드",
+      "dtype": "float64",
+      "missing": 27698,
+      "blank_whitespace": 0,
+      "distinct": 2
+    },
+    {
+      "column": "주업시간수",
+      "dtype": "float64",
+      "missing": 20762,
+      "blank_whitespace": 0,
+      "distinct": 97
+    },
+    {
+      "column": "부업시간수",
+      "dtype": "float64",
+      "missing": 20762,
+      "blank_whitespace": 0,
+      "distinct": 33
+    },
+    {
+      "column": "휴일종류코드",
+      "dtype": "float64",
+      "missing": 20762,
+      "blank_whitespace": 0,
+      "distinct": 6
+    },
+    {
+      "column": "가구원소득구간코드",
+      "dtype": "float64",
+      "missing": 2714,
+      "blank_whitespace": 0,
+      "distinct": 9
+    },
+    {
+      "column": "기분상태코드",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 5
+    },
+    {
+      "column": "(기분좋은행동) 행동코드",
+      "dtype": "float64",
+      "missing": 588,
+      "blank_whitespace": 0,
+      "distinct": 150
+    },
+    {
+      "column": "(기분좋지않은행동) 행동코드",
+      "dtype": "float64",
+      "missing": 1872,
+      "blank_whitespace": 0,
+      "distinct": 152
+    },
+    {
+      "column": "(스트레스받은행동) 행동코드",
+      "dtype": "float64",
+      "missing": 2091,
+      "blank_whitespace": 0,
+      "distinct": 150
+    },
+    {
+      "column": "건강상태코드",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 5
+    },
+    {
+      "column": "근무등교코드",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 2
+    },
+    {
+      "column": "방문객유무코드",
+      "dtype": "float64",
+      "missing": 24668,
+      "blank_whitespace": 0,
+      "distinct": 2
+    },
+    {
+      "column": "방문객코드",
+      "dtype": "float64",
+      "missing": 47403,
+      "blank_whitespace": 0,
+      "distinct": 26
+    },
+    {
+      "column": "(주행동시간량_111) 수면",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 105
+    },
+    {
+      "column": "(주행동시간량_112) 잠못이룸",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 32
+    },
+    {
+      "column": "(주행동시간량_121) 식사하기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 38
+    },
+    {
+      "column": "(주행동시간량_122) 간식및음료섭취",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 33
+    },
+    {
+      "column": "(주행동시간량_131) 자기건강관리",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 32
+    },
+    {
+      "column": "(주행동시간량_132) 아파서쉼",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 50
+    },
+    {
+      "column": "(주행동시간량_133) 의료서비스받기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 45
+    },
+    {
+      "column": "(주행동시간량_141) 개인위생",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 32
+    },
+    {
+      "column": "(주행동시간량_142) 외모관리",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 24
+    },
+    {
+      "column": "(주행동시간량_143) 이미용관련서비스받기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 29
+    },
+    {
+      "column": "(주행동시간량_149) 기타개인유지",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 13
+    },
+    {
+      "column": "(주행동시간량_210) 법인^정부기관^비영리단체등의일",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 92
+    },
+    {
+      "column": "(주행동시간량_221) 농림어업관련가계비법인기업일",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 71
+    },
+    {
+      "column": "(주행동시간량_222) 제조업관련가계비법인기업일",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 70
+    },
+    {
+      "column": "(주행동시간량_223) 서비스업관련가계비법인기업일",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 96
+    },
+    {
+      "column": "(주행동시간량_229) 기타가계비법인기업일",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 68
+    },
+    {
+      "column": "(주행동시간량_23) 무급가족 일",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 46
+    },
+    {
+      "column": "(주행동시간량_241) 일중휴식",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 12
+    },
+    {
+      "column": "(주행동시간량_242) 일관련연수",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 46
+    },
+    {
+      "column": "(주행동시간량_249) 기타일관련활동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 56
+    },
+    {
+      "column": "(주행동시간량_25) 구직 및 창업활동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 42
+    },
+    {
+      "column": "(주행동시간량_26) 자가소비를 위한 일",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 51
+    },
+    {
+      "column": "(주행동시간량_311) 학교수업",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 52
+    },
+    {
+      "column": "(주행동시간량_312) 학교수업간휴식",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 9
+    },
+    {
+      "column": "(주행동시간량_313) 학교자율학습",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 48
+    },
+    {
+      "column": "(주행동시간량_314) 학교행사",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 32
+    },
+    {
+      "column": "(주행동시간량_319) 기타학교활동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 29
+    },
+    {
+      "column": "(주행동시간량_321) 학원수강",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 64
+    },
+    {
+      "column": "(주행동시간량_322) 방송온라인강의수강",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 67
+    },
+    {
+      "column": "(주행동시간량_323) 학교외자율학습",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 78
+    },
+    {
+      "column": "(주행동시간량_329) 기타학교활동외학습",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 59
+    },
+    {
+      "column": "(주행동시간량_411) 식사준비",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 31
+    },
+    {
+      "column": "(주행동시간량_412) 간식비일상적음식만들기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 52
+    },
+    {
+      "column": "(주행동시간량_413) 설거지식후정리",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 27
+    },
+    {
+      "column": "(주행동시간량_421) 세탁하기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 17
+    },
+    {
+      "column": "(주행동시간량_422) 세탁물건조",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 12
+    },
+    {
+      "column": "(주행동시간량_423) 다림질및옷정리",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 18
+    },
+    {
+      "column": "(주행동시간량_424) 의류수선및손질",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 13
+    },
+    {
+      "column": "(주행동시간량_431) 청소",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 27
+    },
+    {
+      "column": "(주행동시간량_432) 정리",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 37
+    },
+    {
+      "column": "(주행동시간량_433) 쓰레기분리및버리기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 14
+    },
+    {
+      "column": "(주행동시간량_44) 주거 및 가정용품 관리",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 34
+    },
+    {
+      "column": "(주행동시간량_45) 차량 관리 및 유지",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 20
+    },
+    {
+      "column": "(주행동시간량_461) 반려동물돌보기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 37
+    },
+    {
+      "column": "(주행동시간량_462) 식물돌보기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 24
+    },
+    {
+      "column": "(주행동시간량_463) 반려동물및식물서비스받기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 12
+    },
+    {
+      "column": "(주행동시간량_471) 상품매장쇼핑",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 30
+    },
+    {
+      "column": "(주행동시간량_472) 상품온라인쇼핑",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 26
+    },
+    {
+      "column": "(주행동시간량_473) 서비스현장구입",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 13
+    },
+    {
+      "column": "(주행동시간량_474) 서비스온라인구입",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 12
+    },
+    {
+      "column": "(주행동시간량_479) 기타쇼핑관련행동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 10
+    },
+    {
+      "column": "(주행동시간량_49) 기타 가정관리",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 36
+    },
+    {
+      "column": "(주행동시간량_511) 10세미만아이신체적돌보기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 59
+    },
+    {
+      "column": "(주행동시간량_512) 10세미만아이간호하기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 26
+    },
+    {
+      "column": "(주행동시간량_513) 10세미만아이훈육및공부가르치기(봐주기)",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 22
+    },
+    {
+      "column": "(주행동시간량_514) 10세미만아이책읽어주기^대화하기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 19
+    },
+    {
+      "column": "(주행동시간량_515) 10세미만아이와놀아주기^스포츠활동하기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 38
+    },
+    {
+      "column": "(주행동시간량_516) 10세미만아이선생님과상담및학교등방문",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 17
+    },
+    {
+      "column": "(주행동시간량_519) 10세미만아이기타돌보기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 26
+    },
+    {
+      "column": "(주행동시간량_52) 만 10세 이상 미성년자 돌보기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 36
+    },
+    {
+      "column": "(주행동시간량_53) 장기 돌봄 필요 성인 돌보기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 46
+    },
+    {
+      "column": "(주행동시간량_54) 독립적인 성인 돌보기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 32
+    },
+    {
+      "column": "(주행동시간량_61) 비조직 기반(직접) 자원봉사",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 46
+    },
+    {
+      "column": "(주행동시간량_62) 조직 및 공동체 기반 자원봉사",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 42
+    },
+    {
+      "column": "(주행동시간량_711) 대면교제",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 48
+    },
+    {
+      "column": "(주행동시간량_712) 화상음성교제",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 32
+    },
+    {
+      "column": "(주행동시간량_713) 문자편지이메일교제",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 23
+    },
+    {
+      "column": "(주행동시간량_714) 사회관계망을통한교제",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 40
+    },
+    {
+      "column": "(주행동시간량_719) 기타교제관련활동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 23
+    },
+    {
+      "column": "(주행동시간량_72) 참여활동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 37
+    },
+    {
+      "column": "(주행동시간량_731) 개인적종교활동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 50
+    },
+    {
+      "column": "(주행동시간량_732) 종교집회모임참가",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 46
+    },
+    {
+      "column": "(주행동시간량_739) 기타종교관련활동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 39
+    },
+    {
+      "column": "(주행동시간량_74) 의례활동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 30
+    },
+    {
+      "column": "(주행동시간량_81) 문화 및 관광활동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 42
+    },
+    {
+      "column": "(주행동시간량_821) 책읽기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 55
+    },
+    {
+      "column": "(주행동시간량_822) 신문보기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 26
+    },
+    {
+      "column": "(주행동시간량_823) 잡지보기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 12
+    },
+    {
+      "column": "(주행동시간량_824) 실시간방송시청",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 88
+    },
+    {
+      "column": "(주행동시간량_825) 동영상시청",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 75
+    },
+    {
+      "column": "(주행동시간량_826) 실시간라디오방송듣기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 30
+    },
+    {
+      "column": "(주행동시간량_827) 음원음반듣기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 27
+    },
+    {
+      "column": "(주행동시간량_828) 인터넷정보검색",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 47
+    },
+    {
+      "column": "(주행동시간량_829) 기타미디어관련여가활동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 34
+    },
+    {
+      "column": "(주행동시간량_831) 걷기산책",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 37
+    },
+    {
+      "column": "(주행동시간량_832) 달리기조깅",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 20
+    },
+    {
+      "column": "(주행동시간량_833) 등산",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 41
+    },
+    {
+      "column": "(주행동시간량_834) 자전거인라인",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 35
+    },
+    {
+      "column": "(주행동시간량_835) 개인운동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 35
+    },
+    {
+      "column": "(주행동시간량_836) 구기운동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 48
+    },
+    {
+      "column": "(주행동시간량_837) 낚시사냥",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 46
+    },
+    {
+      "column": "(주행동시간량_839) 기타스포츠레포츠",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 40
+    },
+    {
+      "column": "(주행동시간량_841) 집단게임및놀이",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 39
+    },
+    {
+      "column": "(주행동시간량_842) PC게임",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 76
+    },
+    {
+      "column": "(주행동시간량_843) 모바일게임",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 62
+    },
+    {
+      "column": "(주행동시간량_849) 기타게임및놀이",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 29
+    },
+    {
+      "column": "(주행동시간량_851) 아무것도안하고쉼",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 34
+    },
+    {
+      "column": "(주행동시간량_852) 담배피우기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 15
+    },
+    {
+      "column": "(주행동시간량_891) 개인취미활동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 50
+    },
+    {
+      "column": "(주행동시간량_892) 여가교양학습",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 44
+    },
+    {
+      "column": "(주행동시간량_893) 유흥",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 38
+    },
+    {
+      "column": "(주행동시간량_899) 기타여가관련활동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 36
+    },
+    {
+      "column": "(주행동시간량_910) 개인유지관련이동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 53
+    },
+    {
+      "column": "(주행동시간량_921) 출근",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 23
+    },
+    {
+      "column": "(주행동시간량_922) 퇴근",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 25
+    },
+    {
+      "column": "(주행동시간량_923) 출장및기타일관련이동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 52
+    },
+    {
+      "column": "(주행동시간량_924) 자가소비일관련이동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 21
+    },
+    {
+      "column": "(주행동시간량_930) 학습관련이동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 34
+    },
+    {
+      "column": "(주행동시간량_940) 가정관리관련이동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 33
+    },
+    {
+      "column": "(주행동시간량_951) 만10세미만아이돌보기관련이동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 25
+    },
+    {
+      "column": "(주행동시간량_952) 만10세이상미성년자돌보기관련이동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 23
+    },
+    {
+      "column": "(주행동시간량_953) 장기돌봄필요성인돌보기관련이동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 21
+    },
+    {
+      "column": "(주행동시간량_954) 독립적인성인돌보기관련이동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 28
+    },
+    {
+      "column": "(주행동시간량_960) 자원봉사및무급연수관련이동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 24
+    },
+    {
+      "column": "(주행동시간량_970) 교제및참여활동관련이동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 50
+    },
+    {
+      "column": "(주행동시간량_980) 문화및여가활동관련이동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 55
+    },
+    {
+      "column": "(동시행동시간량_111) 수면",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 23
+    },
+    {
+      "column": "(동시행동시간량_112) 잠못이룸",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 1
+    },
+    {
+      "column": "(동시행동시간량_121) 식사하기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 20
+    },
+    {
+      "column": "(동시행동시간량_122) 간식및음료섭취",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 31
+    },
+    {
+      "column": "(동시행동시간량_131) 자기건강관리",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 14
+    },
+    {
+      "column": "(동시행동시간량_132) 아파서쉼",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 1
+    },
+    {
+      "column": "(동시행동시간량_133) 의료서비스받기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 6
+    },
+    {
+      "column": "(동시행동시간량_141) 개인위생",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 9
+    },
+    {
+      "column": "(동시행동시간량_142) 외모관리",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 10
+    },
+    {
+      "column": "(동시행동시간량_143) 이미용관련서비스받기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 4
+    },
+    {
+      "column": "(동시행동시간량_149) 기타개인유지",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 5
+    },
+    {
+      "column": "(동시행동시간량_210) 법인^정부기관^비영리단체등의일",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 11
+    },
+    {
+      "column": "(동시행동시간량_221) 농림어업관련가계비법인기업일",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 3
+    },
+    {
+      "column": "(동시행동시간량_222) 제조업관련가계비법인기업일",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 5
+    },
+    {
+      "column": "(동시행동시간량_223) 서비스업관련가계비법인기업일",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 12
+    },
+    {
+      "column": "(동시행동시간량_229) 기타가계비법인기업일",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 4
+    },
+    {
+      "column": "(동시행동시간량_23) 무급가족 일",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 1
+    },
+    {
+      "column": "(동시행동시간량_241) 일중휴식",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 1
+    },
+    {
+      "column": "(동시행동시간량_242) 일관련연수",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 10
+    },
+    {
+      "column": "(동시행동시간량_249) 기타일관련활동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 17
+    },
+    {
+      "column": "(동시행동시간량_25) 구직 및 창업활동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 5
+    },
+    {
+      "column": "(동시행동시간량_26) 자가소비를 위한 일",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 12
+    },
+    {
+      "column": "(동시행동시간량_311) 학교수업",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 1
+    },
+    {
+      "column": "(동시행동시간량_312) 학교수업간휴식",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 1
+    },
+    {
+      "column": "(동시행동시간량_313) 학교자율학습",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 3
+    },
+    {
+      "column": "(동시행동시간량_314) 학교행사",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 1
+    },
+    {
+      "column": "(동시행동시간량_319) 기타학교활동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 3
+    },
+    {
+      "column": "(동시행동시간량_321) 학원수강",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 1
+    },
+    {
+      "column": "(동시행동시간량_322) 방송온라인강의수강",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 17
+    },
+    {
+      "column": "(동시행동시간량_323) 학교외자율학습",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 15
+    },
+    {
+      "column": "(동시행동시간량_329) 기타학교활동외학습",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 9
+    },
+    {
+      "column": "(동시행동시간량_411) 식사준비",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 9
+    },
+    {
+      "column": "(동시행동시간량_412) 간식비일상적음식만들기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 12
+    },
+    {
+      "column": "(동시행동시간량_413) 설거지식후정리",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 7
+    },
+    {
+      "column": "(동시행동시간량_421) 세탁하기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 13
+    },
+    {
+      "column": "(동시행동시간량_422) 세탁물건조",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 9
+    },
+    {
+      "column": "(동시행동시간량_423) 다림질및옷정리",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 10
+    },
+    {
+      "column": "(동시행동시간량_424) 의류수선및손질",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 6
+    },
+    {
+      "column": "(동시행동시간량_431) 청소",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 10
+    },
+    {
+      "column": "(동시행동시간량_432) 정리",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 9
+    },
+    {
+      "column": "(동시행동시간량_433) 쓰레기분리및버리기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 8
+    },
+    {
+      "column": "(동시행동시간량_44) 주거 및 가정용품 관리",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 6
+    },
+    {
+      "column": "(동시행동시간량_45) 차량 관리 및 유지",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 3
+    },
+    {
+      "column": "(동시행동시간량_461) 반려동물돌보기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 17
+    },
+    {
+      "column": "(동시행동시간량_462) 식물돌보기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 7
+    },
+    {
+      "column": "(동시행동시간량_463) 반려동물및식물서비스받기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 3
+    },
+    {
+      "column": "(동시행동시간량_471) 상품매장쇼핑",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 10
+    },
+    {
+      "column": "(동시행동시간량_472) 상품온라인쇼핑",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 15
+    },
+    {
+      "column": "(동시행동시간량_473) 서비스현장구입",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 5
+    },
+    {
+      "column": "(동시행동시간량_474) 서비스온라인구입",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 10
+    },
+    {
+      "column": "(동시행동시간량_479) 기타쇼핑관련행동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 5
+    },
+    {
+      "column": "(동시행동시간량_49) 기타 가정관리",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 18
+    },
+    {
+      "column": "(동시행동시간량_511) 10세미만아이신체적돌보기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 18
+    },
+    {
+      "column": "(동시행동시간량_512) 10세미만아이간호하기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 6
+    },
+    {
+      "column": "(동시행동시간량_513) 10세미만아이훈육및공부가르치기(봐주기)",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 9
+    },
+    {
+      "column": "(동시행동시간량_514) 10세미만아이책읽어주기^대화하기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 32
+    },
+    {
+      "column": "(동시행동시간량_515) 10세미만아이와놀아주기^스포츠활동하기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 15
+    },
+    {
+      "column": "(동시행동시간량_516) 10세미만아이선생님과상담및학교등방문",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 4
+    },
+    {
+      "column": "(동시행동시간량_519) 10세미만아이기타돌보기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 14
+    },
+    {
+      "column": "(동시행동시간량_52) 만 10세 이상 미성년자 돌보기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 28
+    },
+    {
+      "column": "(동시행동시간량_53) 장기 돌봄 필요 성인 돌보기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 19
+    },
+    {
+      "column": "(동시행동시간량_54) 독립적인 성인 돌보기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 10
+    },
+    {
+      "column": "(동시행동시간량_61) 비조직 기반(직접) 자원봉사",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 10
+    },
+    {
+      "column": "(동시행동시간량_62) 조직 및 공동체 기반 자원봉사",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 3
+    },
+    {
+      "column": "(동시행동시간량_711) 대면교제",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 73
+    },
+    {
+      "column": "(동시행동시간량_712) 화상음성교제",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 40
+    },
+    {
+      "column": "(동시행동시간량_713) 문자편지이메일교제",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 28
+    },
+    {
+      "column": "(동시행동시간량_714) 사회관계망을통한교제",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 25
+    },
+    {
+      "column": "(동시행동시간량_719) 기타교제관련활동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 10
+    },
+    {
+      "column": "(동시행동시간량_72) 참여활동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 13
+    },
+    {
+      "column": "(동시행동시간량_731) 개인적종교활동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 23
+    },
+    {
+      "column": "(동시행동시간량_732) 종교집회모임참가",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 1
+    },
+    {
+      "column": "(동시행동시간량_739) 기타종교관련활동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 10
+    },
+    {
+      "column": "(동시행동시간량_74) 의례활동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 3
+    },
+    {
+      "column": "(동시행동시간량_81) 문화 및 관광활동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 7
+    },
+    {
+      "column": "(동시행동시간량_821) 책읽기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 21
+    },
+    {
+      "column": "(동시행동시간량_822) 신문보기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 23
+    },
+    {
+      "column": "(동시행동시간량_823) 잡지보기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 8
+    },
+    {
+      "column": "(동시행동시간량_824) 실시간방송시청",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 54
+    },
+    {
+      "column": "(동시행동시간량_825) 동영상시청",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 49
+    },
+    {
+      "column": "(동시행동시간량_826) 실시간라디오방송듣기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 66
+    },
+    {
+      "column": "(동시행동시간량_827) 음원음반듣기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 71
+    },
+    {
+      "column": "(동시행동시간량_828) 인터넷정보검색",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 43
+    },
+    {
+      "column": "(동시행동시간량_829) 기타미디어관련여가활동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 17
+    },
+    {
+      "column": "(동시행동시간량_831) 걷기산책",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 14
+    },
+    {
+      "column": "(동시행동시간량_832) 달리기조깅",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 1
+    },
+    {
+      "column": "(동시행동시간량_833) 등산",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 1
+    },
+    {
+      "column": "(동시행동시간량_834) 자전거인라인",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 4
+    },
+    {
+      "column": "(동시행동시간량_835) 개인운동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 20
+    },
+    {
+      "column": "(동시행동시간량_836) 구기운동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 7
+    },
+    {
+      "column": "(동시행동시간량_837) 낚시사냥",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 3
+    },
+    {
+      "column": "(동시행동시간량_839) 기타스포츠레포츠",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 5
+    },
+    {
+      "column": "(동시행동시간량_841) 집단게임및놀이",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 14
+    },
+    {
+      "column": "(동시행동시간량_842) PC게임",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 17
+    },
+    {
+      "column": "(동시행동시간량_843) 모바일게임",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 30
+    },
+    {
+      "column": "(동시행동시간량_849) 기타게임및놀이",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 9
+    },
+    {
+      "column": "(동시행동시간량_851) 아무것도안하고쉼",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 1
+    },
+    {
+      "column": "(동시행동시간량_852) 담배피우기",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 13
+    },
+    {
+      "column": "(동시행동시간량_891) 개인취미활동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 21
+    },
+    {
+      "column": "(동시행동시간량_892) 여가교양학습",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 9
+    },
+    {
+      "column": "(동시행동시간량_893) 유흥",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 28
+    },
+    {
+      "column": "(동시행동시간량_899) 기타여가관련활동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 23
+    },
+    {
+      "column": "(동시행동시간량_910) 개인유지관련이동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 1
+    },
+    {
+      "column": "(동시행동시간량_921) 출근",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 1
+    },
+    {
+      "column": "(동시행동시간량_922) 퇴근",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 1
+    },
+    {
+      "column": "(동시행동시간량_923) 출장및기타일관련이동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 1
+    },
+    {
+      "column": "(동시행동시간량_924) 자가소비일관련이동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 1
+    },
+    {
+      "column": "(동시행동시간량_930) 학습관련이동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 1
+    },
+    {
+      "column": "(동시행동시간량_940) 가정관리관련이동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 1
+    },
+    {
+      "column": "(동시행동시간량_951) 만10세미만아이돌보기관련이동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 1
+    },
+    {
+      "column": "(동시행동시간량_952) 만10세이상미성년자돌보기관련이동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 1
+    },
+    {
+      "column": "(동시행동시간량_953) 장기돌봄필요성인돌보기관련이동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 1
+    },
+    {
+      "column": "(동시행동시간량_954) 독립적인성인돌보기관련이동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 1
+    },
+    {
+      "column": "(동시행동시간량_960) 자원봉사및무급연수관련이동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 1
+    },
+    {
+      "column": "(동시행동시간량_970) 교제및참여활동관련이동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 1
+    },
+    {
+      "column": "(동시행동시간량_980) 문화및여가활동관련이동",
+      "dtype": "int64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 1
+    },
+    {
+      "column": "연간_가구가중값",
+      "dtype": "float64",
+      "missing": 24758,
+      "blank_whitespace": 0,
+      "distinct": 1473
+    },
+    {
+      "column": "연간_가구원가중값",
+      "dtype": "float64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 8435
+    },
+    {
+      "column": "연간_시간량가중값",
+      "dtype": "float64",
+      "missing": 0,
+      "blank_whitespace": 0,
+      "distinct": 19665
+    }
+  ],
+  "observed_code_counts": {
+    "day": {
+      "5": 10122,
+      "6": 10076,
+      "0": 9991,
+      "1": 5028,
+      "4": 5009,
+      "2": 4984,
+      "3": 4984
+    },
+    "weekday_type": {
+      "1": 30127,
+      "2": 10076,
+      "3": 9991
+    },
+    "sex": {
+      "2": 26310,
+      "1": 23884
+    },
+    "marital": {
+      "2": 29284,
+      "1": 13636,
+      "3": 4390,
+      "4": 2884
+    },
+    "region": {
+      "31": 6014,
+      "11": 5302,
+      "21": 3182,
+      "23": 3142,
+      "22": 3034,
+      "38": 3008,
+      "37": 2804,
+      "26": 2554,
+      "34": 2496,
+      "24": 2446,
+      "35": 2444,
+      "29": 2338,
+      "39": 2324,
+      "33": 2302,
+      "36": 2290,
+      "25": 2258,
+      "32": 2256
+    },
+    "children": {
+      "0": 36536,
+      "2": 6306,
+      "1": 6052,
+      "3": 1192,
+      "4": 108
+    },
+    "preschool": {
+      "0": 46768,
+      "1": 2700,
+      "2": 678,
+      "3": 48
+    },
+    "enrollment": {
+      "1.0": 39122,
+      "2.0": 6000,
+      "5.0": 2784,
+      "nan": 1038,
+      "3.0": 800,
+      "4.0": 450
+    },
+    "raw_status": {
+      "1.0": 29208,
+      "3.0": 18044,
+      "nan": 2718,
+      "2.0": 224
+    },
+    "status": {
+      "1.0": 29432,
+      "3.0": 18044,
+      "nan": 2718
+    },
+    "unemployed_reason": {
+      "nan": 32150,
+      "5.0": 6526,
+      "2.0": 3830,
+      "3.0": 2572,
+      "1.0": 1452,
+      "4.0": 1410,
+      "6.0": 1134,
+      "8.0": 674,
+      "7.0": 446
+    },
+    "position": {
+      "nan": 20762,
+      "1.0": 16234,
+      "2.0": 4556,
+      "5.0": 4536,
+      "3.0": 1706,
+      "4.0": 1484,
+      "6.0": 916
+    },
+    "lack": {
+      "3": 17956,
+      "2": 14580,
+      "1": 9676,
+      "4": 7982
+    },
+    "fatigue": {
+      "2": 25164,
+      "3": 11700,
+      "1": 11402,
+      "4": 1928
+    },
+    "life_dissatisfaction": {
+      "3": 21748,
+      "2": 16082,
+      "1": 5562,
+      "4": 5544,
+      "5": 1258
+    },
+    "leisure_dissatisfaction": {
+      "3": 21030,
+      "2": 14616,
+      "4": 7324,
+      "1": 5416,
+      "5": 1808
+    }
+  }
+}

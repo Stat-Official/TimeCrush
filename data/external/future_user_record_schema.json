@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "향후 동의 기반 앱 연구 레코드 초안",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "anonymous_user_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "record_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "age_group": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sex": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "marital_status": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "child_flag": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "region_code": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "employment_status": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "cluster_type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "recommended_policy_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "time_poverty_flag": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "policy_interest": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "policy_ineligible": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "no_policy_fit": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "sleep_min": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1440
+    },
+    "personal_min": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1440
+    },
+    "work_min": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1440
+    },
+    "commute_min": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1440
+    },
+    "study_job_min": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1440
+    },
+    "housework_min": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1440
+    },
+    "care_min": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1440
+    },
+    "discretionary_min": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1440
+    }
+  },
+  "required": [
+    "anonymous_user_id",
+    "record_date",
+    "age_group"
+  ]
+}

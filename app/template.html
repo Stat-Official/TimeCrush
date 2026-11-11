@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>하루의 여백 · 청년 시간 진단</title>
+<style>
+
+:root{
+  --ink:#0A0A0B;
+  --muted:#6B6B70;
+  --blue:#2738F5;
+  --blue-dark:#1724B8;
+  --blue-soft:#EEF0FF;
+  --paper:#FFFFFF;
+  --soft:#F4F4F2;
+  --warm:#F6F2EA;
+  --line:#DADADF;
+  --risk:#D93457;
+  --risk-soft:#FFF0F3;
+  --sans:"맑은 고딕","Malgun Gothic",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.55;-webkit-font-smoothing:antialiased}
+button,input,select,output{font:inherit}button{cursor:pointer}button:disabled{cursor:default}a{color:inherit;text-underline-offset:4px}:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.wrap{width:min(1280px,calc(100% - 64px));margin-inline:auto}
+
+/* EDITORIAL MASTHEAD */
+.masthead{display:flex;align-items:center;justify-content:space-between;min-height:62px;border-bottom:1px solid var(--ink);font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+.masthead span:first-child{display:flex;align-items:center;gap:10px}.masthead span:first-child::before{content:"✦";color:var(--blue);font-size:1rem}.masthead span:last-child{color:var(--muted)}
+.hero-layout{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(320px,.92fr);min-height:460px;border-bottom:1px solid var(--ink)}
+.hero-copy{display:flex;flex-direction:column;justify-content:flex-end;padding:64px 56px 54px 0;position:relative}
+.eyebrow,.section-kicker,.form-kicker{margin:0;font-size:.67rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--blue)}
+.hero h1{margin:18px 0 22px;font-size:clamp(4.5rem,8.6vw,8.6rem);font-weight:700;line-height:.86;letter-spacing:-.09em;word-break:keep-all}
+.hero-copy>p:not(.eyebrow){max-width:560px;margin:0;color:#4A4A4E;font-size:1rem;line-height:1.75;word-break:keep-all}
+.badge{margin-top:32px;display:inline-flex;width:max-content;padding:8px 0;border-top:1px solid var(--ink);font-size:.7rem;letter-spacing:.08em}
+.cover{position:relative;overflow:hidden;background:var(--blue);color:#fff;isolation:isolate;display:flex;align-items:flex-end;padding:42px}
+.cover::before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(135deg,transparent 0 52%,rgba(255,255,255,.13) 52% 52.25%,transparent 52.25%),repeating-linear-gradient(90deg,transparent 0 calc(16.66% - 1px),rgba(255,255,255,.12) calc(16.66% - 1px) 16.66%)}
+.cover::after{content:"✦";position:absolute;right:8%;top:7%;font-size:clamp(4rem,9vw,9rem);font-weight:400;line-height:1;color:#fff;transform:rotate(15deg);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.cover:hover::after{transform:rotate(95deg) scale(1.08)}
+.cover-number{font-size:clamp(6rem,12vw,12rem);font-weight:700;line-height:.72;letter-spacing:-.09em;writing-mode:vertical-rl;transform:rotate(180deg);opacity:.98}
+.cover-caption{position:absolute;left:42px;top:38px;font-size:.68rem;font-weight:700;letter-spacing:.18em}.cover-index{position:absolute;right:38px;bottom:34px;font-size:.68rem;font-weight:700;letter-spacing:.16em}
+
+/* SECTION NAV */
+.steps{display:grid;grid-template-columns:repeat(6,1fr);margin:0;border-bottom:1px solid var(--ink);position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:blur(16px);z-index:10}
+.steps button{position:relative;min-height:66px;padding:9px 12px;border:0;border-right:1px solid var(--line);background:transparent;text-align:left;font-weight:700;font-size:.78rem;transition:background .22s,color .22s,transform .22s}
+.steps button:last-child{border-right:0}.steps button span{display:block;margin-bottom:2px;color:var(--blue);font-size:.6rem;letter-spacing:.12em}
+.steps button[aria-current="step"]{background:var(--blue);color:#fff}.steps button[aria-current="step"] span{color:#fff}.steps button:enabled:not([aria-current]):hover{background:var(--blue-soft);transform:translateY(-2px)}
+
+main{padding-bottom:64px}.panel{padding:72px 0 80px;border-bottom:1px solid var(--ink);animation:panelIn .45s cubic-bezier(.2,.8,.2,1)}
+@keyframes panelIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.panel h2{max-width:12ch;margin:10px 0 18px;font-size:clamp(3.2rem,6vw,6.7rem);line-height:.92;letter-spacing:-.075em;word-break:keep-all}
+.panel h3{font-size:1rem}.sub{max-width:720px;color:var(--muted);font-size:.92rem;line-height:1.75}
+.section-kicker::before{content:"[ ";color:var(--ink)}.section-kicker::after{content:" ]";color:var(--ink)}
+
+/* ENTRY — MAGAZINE GRID */
+#entry{display:block;margin-top:54px;border-top:1px solid var(--ink)}
+.profile-band{display:grid;grid-template-columns:220px 1fr;gap:40px;padding:28px 0 38px;border-bottom:1px solid var(--ink)}
+.profile-band .form-kicker{padding-top:12px}.profile-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0 24px}.profile-grid .weekly-field{grid-column:auto}
+.time-stage{padding:46px 0 0}.time-stage-head{display:grid;grid-template-columns:220px 1fr;gap:40px;align-items:start;margin-bottom:22px}.time-stage-head h3{margin:0;font-size:clamp(1.6rem,3vw,3rem);line-height:1.05;letter-spacing:-.045em}.time-stage-head p{grid-column:2;margin:8px 0 0;color:var(--muted);max-width:720px;font-size:.82rem}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.field{position:relative;display:flex;flex-direction:column;min-width:0;padding:22px 20px 18px;border-top:1px solid var(--line);font-size:.72rem;font-weight:700;transition:background .22s,color .22s,transform .22s}
+#times .field{min-height:128px;border-right:1px solid var(--line)}#times .field:nth-child(3n){border-right:0}#times .field:hover{background:var(--blue-soft)}
+input[type="number"],select{width:100%;min-height:52px;margin-top:12px;padding:0;border:0;border-bottom:1px solid var(--ink);border-radius:0;background:transparent;color:var(--ink);font-size:1.28rem;font-weight:700;appearance:auto;-webkit-text-fill-color:var(--ink);opacity:1}
+input::-webkit-credentials-auto-fill-button,input::-webkit-contacts-auto-fill-button{visibility:hidden!important;display:none!important;pointer-events:none!important;position:absolute!important;right:0!important}
+#times input[type="number"]{margin-top:0;font-size:1.7rem;letter-spacing:-.04em}
+.time-inputs{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) auto;gap:8px;align-items:end;margin-top:auto}.time-inputs input{min-width:0}.time-unit{padding-bottom:12px;font-size:.7rem;color:var(--muted)}.field:focus-within .time-unit{color:#3B3B42}.auto-time{margin-top:auto;padding:14px 0 8px;border-bottom:1px solid var(--ink);font-size:1.9rem;letter-spacing:-.05em}.auto-field{background:var(--blue-soft)}.auto-field:hover{background:var(--blue-soft)!important}.auto-field:focus-within{background:var(--blue-soft);color:var(--ink);transform:none}
+input[type="number"]:focus,select:focus{outline:0;border-bottom:3px solid var(--blue)}
+.field:focus-within{background:var(--blue-soft);color:var(--ink);transform:translateY(-2px)}.field:focus-within input,.field:focus-within select{color:#111218;border-color:var(--blue);caret-color:var(--blue)}.field:focus-within small{color:#50505A}
+.field small{margin-top:8px;color:var(--muted);font-size:.66rem;font-weight:400;line-height:1.55}
+.entry-footer{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center;margin-top:34px;padding-top:22px;border-top:1px solid var(--ink)}
+.notice{margin:0;padding:15px 18px;background:var(--blue-soft);border-left:5px solid var(--blue);font-size:.82rem}.notice.warning{background:var(--soft);border-left-color:var(--ink)}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}.entry-footer .actions{margin:0}
+.primary,.secondary{min-height:52px;padding:11px 22px;border-radius:0;border:1px solid var(--ink);font-weight:700;transition:transform .2s,background .2s,color .2s}.primary{background:var(--ink);color:#fff}.primary:enabled:hover{background:var(--blue);border-color:var(--blue);transform:translateY(-3px)}.secondary{background:#fff;color:var(--ink)}.secondary:enabled:hover{background:var(--blue-soft);transform:translateY(-3px)}
+
+
+/* COMPARISON + TYPE INDEX */
+.compare-lead{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);margin:34px 0 44px}.compare-lead>div{padding:24px 20px;border-right:1px solid var(--line)}.compare-lead>div:last-child{border-right:0}.compare-lead strong{display:block;margin-top:10px;font-size:clamp(2rem,4vw,4rem);line-height:.95;letter-spacing:-.06em}.compare-lead small{color:var(--muted)}
+.day-chart{margin-top:28px;border-top:1px solid var(--ink)}.day-row{display:grid;grid-template-columns:150px 1fr 118px;gap:18px;align-items:center;padding:18px 0;border-bottom:1px solid var(--line)}.day-label{font-size:.78rem;font-weight:700}.day-track{position:relative;height:34px;background:linear-gradient(180deg,transparent 15px,var(--soft) 15px 19px,transparent 19px);overflow:visible}.day-bar{position:absolute;left:0;top:14px;height:6px;background:var(--blue);transform-origin:left;animation:growbar .45s ease both;z-index:3}.ref-median{position:absolute;top:5px;width:3px;height:24px;background:var(--ink);z-index:5;transform:translateX(-50%)}.ref-mean{position:absolute;top:5px;width:3px;height:24px;background:#7A7A84;z-index:4;transform:translateX(-50%)}.ref-median::before,.ref-mean::before{position:absolute;left:50%;top:-7px;transform:translate(-50%,-100%);width:30px;height:18px;padding:0;box-sizing:border-box;font-size:.56rem;font-weight:800;line-height:18px;text-align:center;letter-spacing:.02em;white-space:nowrap}.ref-median::before{content:"MED";background:var(--ink);color:#fff}.ref-mean::before{content:"AVG";background:#fff;border:1px solid #B8B8C0;color:#575761}.day-value{text-align:right;font-size:.8rem;font-weight:700}.day-meta{display:block;margin-top:2px;color:var(--muted);font-size:.62rem;font-weight:400}.chart-legend{display:flex;gap:20px;flex-wrap:wrap;margin:18px 0 6px;color:var(--muted);font-size:.68rem}.chart-legend span{display:inline-flex;align-items:center;gap:8px}.legend-line{width:24px;height:5px;background:var(--blue)}.legend-median,.legend-mean{display:inline-grid;place-items:center;width:30px;height:18px;padding:0;box-sizing:border-box;font-size:.56rem;font-style:normal;font-weight:800;line-height:18px;letter-spacing:.02em}.legend-median{background:var(--ink);color:#fff}.legend-mean{border:1px solid #B8B8C0;background:#fff;color:#575761}@keyframes growbar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.type-catalog{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:42px;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}.type-card{padding:26px 22px;min-height:190px;border-right:1px solid var(--line);position:relative}.type-card:last-child{border-right:0}.type-card.is-mine{background:var(--blue);color:#fff}.type-card .type-no{font-size:.62rem;letter-spacing:.14em;font-weight:700;color:var(--blue)}.type-card.is-mine .type-no,.type-card.is-mine .quiet{color:rgba(255,255,255,.78)}.type-card h4{font-size:1.25rem;letter-spacing:-.04em;margin:18px 0 10px}.type-share{position:absolute;right:18px;top:18px;font-size:.68rem;font-weight:700}.type-card.is-mine .type-share{color:#fff}
+
+/* RESULTS */
+.metrics,.signal-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin:38px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.metric,.signal{min-height:150px;padding:24px 20px;border-right:1px solid var(--line);background:#fff}.metric:last-child,.signal:last-child{border-right:0}.metric strong{display:block;margin-top:18px;font-size:clamp(2.2rem,4.5vw,4.8rem);line-height:.9;letter-spacing:-.065em}.metric small,.signal small{color:var(--muted)}
+.signal[data-state="on"]{background:var(--risk-soft);color:var(--risk)}.signal strong + small{margin-left:12px}.signal-state{font-size:.65rem;letter-spacing:.1em;font-weight:700}
+.type-head{position:relative;margin:36px 0;padding:38px 42px;background:var(--blue);color:#fff;overflow:hidden}.type-head::after{content:"✦";position:absolute;right:28px;top:12px;font-size:5rem;color:rgba(255,255,255,.25)}.type-head p{color:#fff}.type-head h3{margin:12px 0 6px;font-size:clamp(2rem,4vw,4.2rem);line-height:1;letter-spacing:-.05em}
+.stack{display:flex;height:30px;margin:30px 0 10px;background:var(--soft);overflow:hidden}.legend{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:.74rem}.swatch{display:inline-block;width:10px;height:10px;margin-right:5px}.profile{display:grid;grid-template-columns:160px 1fr 70px;gap:14px;align-items:center;margin:15px 0}.profile progress{width:100%;accent-color:var(--blue)}
+.sliders{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 42px;margin-top:36px}.slider-row{padding:18px 0;border-top:1px solid var(--ink)}.slider-title{display:flex;justify-content:space-between;gap:16px;font-weight:700}.slider-track{display:block;margin-top:16px}.slider-track input{width:100%;accent-color:var(--blue)}.slider-scale{display:flex;justify-content:space-between;color:var(--muted);font-size:.65rem}
+#policies{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 40px;margin-top:36px}.policy{padding:28px 0;border-top:1px solid var(--ink)}.policy h3{margin:0 0 12px;font-size:1.4rem;letter-spacing:-.035em}.chip{display:inline-block;margin:0 5px 5px 0;padding:5px 8px;background:var(--blue);color:#fff;font-size:.65rem;font-weight:700}.guide-list{margin:24px 0;padding:24px 26px;background:var(--warm);border-top:4px solid var(--blue)}
+details{margin-top:28px;border-top:1px solid var(--ink);padding-top:18px}summary{cursor:pointer;font-weight:700}.quiet{color:var(--muted);font-size:.78rem;line-height:1.7}.sim-head{display:flex;justify-content:space-between;gap:28px;align-items:flex-start}
+.footer{display:grid;grid-template-columns:1fr auto 1fr;gap:24px;align-items:center;padding:28px 0 48px;color:var(--muted);font-size:.72rem}.footer-left{text-align:left}.footer-center{text-align:center;color:#8a8a92;letter-spacing:.01em;white-space:nowrap}.footer-right{text-align:right}
+
+@media(max-width:900px){.compare-lead,.type-catalog{grid-template-columns:1fr}.compare-lead>div,.type-card{border-right:0;border-bottom:1px solid var(--line)}.day-row{grid-template-columns:110px 1fr 80px}.wrap{width:calc(100% - 36px)}.hero-layout{grid-template-columns:1fr;min-height:0}.hero-copy{padding:52px 0}.cover{min-height:300px}.steps{overflow-x:auto;grid-template-columns:repeat(6,minmax(120px,1fr))}.profile-band,.time-stage-head{grid-template-columns:1fr;gap:14px}.profile-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.time-stage-head p{grid-column:1}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}#times .field:nth-child(3n){border-right:1px solid var(--line)}#times .field:nth-child(2n){border-right:0}.entry-footer{grid-template-columns:1fr}.metrics,.signal-grid{grid-template-columns:1fr}.metric,.signal{border-right:0;border-bottom:1px solid var(--line)}.sliders,#policies{grid-template-columns:1fr}}
+@media(max-width:560px){.time-inputs{grid-template-columns:1fr auto 1fr auto}.day-row{grid-template-columns:1fr}.day-value{text-align:left}.wrap{width:calc(100% - 24px)}.hero h1{font-size:clamp(4rem,21vw,6.6rem)}.cover{min-height:240px;padding:28px}.profile-grid,.grid{grid-template-columns:1fr}#times .field{border-right:0!important}.panel{padding:52px 0 58px}.panel h2{font-size:clamp(3rem,16vw,5rem)}.entry-footer .actions{width:100%}.primary,.secondary{width:100%}.sim-head{display:block}.footer{display:block}.footer-left,.footer-center,.footer-right{text-align:left}.footer-center{margin:8px 0;white-space:normal}}
+
+</style>
+</head>
+<body>
+<header class="hero wrap">
+<div class="masthead"><span>TIME / EDIT</span><span>YOUTH TIME INDEX · 2024</span></div>
+<div class="hero-layout"><div class="hero-copy">
+<p class="eyebrow">2024 생활시간조사 기반 연구 프로토타입</p>
+<h1>하루의 여백</h1>
+<p>평일 하루를 기록하고 비슷한 청년과 비교해 보세요. 근로·통근·가사 시간을 옮겼을 때 하루가 어떻게 달라지는지도 볼 수 있어요.</p>
+<div class="badge" id="heroSample"></div>
+</div><div class="cover" aria-hidden="true"><span class="cover-number">24H</span><span class="cover-caption">A DAY, EDITED BY YOU</span><span class="cover-index">TIMECRUSH · STAT-OFFICIAL</span></div></div>
+</header>
+<main class="wrap">
+<nav class="steps" aria-label="진단 단계">
+<button type="button" data-step="0" aria-current="step" aria-label="1. 입력"><span aria-hidden="true">01</span>입력</button><button type="button" data-step="1" aria-label="2. 리포트"><span aria-hidden="true">02</span>리포트</button><button type="button" data-step="2" aria-label="3. 비교"><span aria-hidden="true">03</span>비교</button><button type="button" data-step="3" aria-label="4. 바꿔보기"><span aria-hidden="true">04</span>바꿔보기</button><button type="button" data-step="4" aria-label="5. 유형"><span aria-hidden="true">05</span>유형</button><button type="button" data-step="5" aria-label="6. 정책"><span aria-hidden="true">06</span>정책</button>
+</nav>
+<section class="panel" id="p0">
+<p class="section-kicker" aria-hidden="true">01 / THE DIARY</p>
+<h2 tabindex="-1">평일 하루를 입력하세요</h2><p class="sub">한 번에 한 활동만 입력해 주세요. 식사하면서 영상을 봤다면 그 시간의 주된 활동에만 적습니다.</p>
+<form id="entry" autocomplete="off">
+<div class="profile-band">
+<p class="form-kicker" aria-hidden="true">01 / PROFILE</p>
+<div class="profile-grid" id="personalFields">
+<label class="field">만 나이<select id="age"></select></label>
+<label class="field">경제활동<select id="status"><option value="1">취업 중</option><option value="3">미취업</option></select></label>
+<label class="field">미취학 자녀<select id="child"><option value="0">없음</option><option value="1">있음</option><option value="">응답하지 않음</option></select></label>
+<label class="field weekly-field">평소 주당 근로시간 (시간)<input id="weekly" name="yt-weekly-hours" type="number" min="0" max="168" step="any" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" data-1p-ignore="true" data-lpignore="true"><small>주업과 부업을 합산합니다. 비워 두면 입력한 평일 근로시간 × 5로 자동 계산합니다.</small></label>
+</div>
+</div>
+<div class="time-stage">
+<div class="time-stage-head"><p class="form-kicker" aria-hidden="true">02 / 24 HOURS</p><h3>오늘의 1,440분을 배치해 보세요.</h3><p>한 번에 한 활동만 입력합니다. 식사하면서 영상을 봤다면 그 시간의 주된 활동 한 곳에만 적어 주세요.</p></div>
+<div class="grid" id="times"></div>
+<p class="quiet">식사·개인관리, 근로·학습·가사·돌봄에 각각 관련 이동을 더해 주세요. 재량시간에는 여가·교제·종교·자원봉사와 관련 이동을 포함합니다.</p>
+<div class="entry-footer"><p class="notice" id="balance" aria-live="polite"></p><div class="actions"><button class="primary" type="submit" id="diagnose" disabled>진단 보기</button><button class="secondary" type="button" id="example">입력 예시 채우기</button></div></div>
+</div>
+</form>
+</section>
+<section class="panel" id="p1" hidden>
+<p class="section-kicker" aria-hidden="true">02 / THE REPORT</p>
+<h2 tabindex="-1">내 시간 리포트</h2><p class="sub">2024년 만 19–34세 평일 일지로 계산한 기준입니다.</p>
+<div id="report"></div><div class="actions"><button class="primary" type="button" data-next="2">비슷한 청년과 비교</button></div>
+</section>
+<section class="panel" id="p2" hidden>
+<p class="section-kicker" aria-hidden="true">03 / THE COMPARISON</p>
+<h2 tabindex="-1">비슷한 조건의 청년</h2><p class="sub">같은 연령대·경제활동·미취학 자녀 조건을 우선 비교합니다. 30명 미만이면 조건을 넓힙니다.</p>
+<div id="compare"></div><div class="actions"><button class="primary" type="button" data-next="3">시간 바꿔보기</button></div>
+</section>
+<section class="panel" id="p3" hidden>
+<p class="section-kicker" aria-hidden="true">04 / THE REBALANCE</p>
+<div class="sim-head"><div>
+<h2 tabindex="-1">시간을 옮겨 보세요</h2><p class="sub">가운데 0은 원래 입력값입니다. 왼쪽은 활동시간 감소, 오른쪽은 증가이며, 차이는 재량시간과 교환됩니다.</p>
+</div><button class="secondary" type="button" id="resetSimulation">입력값으로 되돌리기</button></div>
+<div class="sliders" id="sliders"></div>
+<p class="quiet" id="simLimits" aria-live="polite"></p>
+<div id="simulation" aria-live="polite"></div><div class="actions"><button class="primary" type="button" data-next="4">시간사용 유형 보기</button></div>
+</section>
+<section class="panel" id="p4" hidden>
+<p class="section-kicker" aria-hidden="true">05 / THE PROFILE</p>
+<h2 tabindex="-1">어떤 시간사용 유형과 가까울까요?</h2><p class="sub">시간 신호를 각각 확인하고, 재량시간이 부족할 때는 시간이 어디에 집중됐는지 살펴봅니다.</p><div id="type"></div>
+<div class="actions"><button class="primary" type="button" data-next="5">관련 정책·지원·안내 보기</button></div>
+</section>
+<section class="panel" id="p5" hidden>
+<p class="section-kicker" aria-hidden="true">06 / THE RESOURCES</p>
+<h2 tabindex="-1">관련 정책·지원·안내</h2><p class="sub">시간사용과 개인조건을 바탕으로 볼 만한 정책·지원·안내를 정리했어요. 제도는 신청 시점의 공고와 자격을 확인해 주세요.</p><div id="signalGuidance"></div><div id="policies"></div>
+<details><summary>내 기록을 이 브라우저에 선택 저장</summary>
+<p class="quiet">동의 후 이 브라우저에 현재 기록을 보관할 수 있습니다. 이름·주소는 받지 않으며 기록은 서버로 전송되지 않습니다. 화면을 닫기 전에 다운로드하거나 삭제할 수 있어요.</p>
+<label><input id="consent" type="checkbox"> 이 기기의 브라우저에 기록을 저장하는 데 동의합니다.</label>
+<div class="actions"><button type="button" class="secondary" id="save">기록 저장</button><button type="button" class="secondary" id="export">저장 기록 받기</button><button type="button" class="secondary" id="erase">저장 기록 삭제</button></div>
+<p id="recordMessage" class="quiet" aria-live="polite"></p>
+</details>
+</section>
+</main>
+<footer class="footer wrap">
+  <div class="footer-left"><a href="https://www.mods.go.kr/board.es?act=view&bid=220&list_no=437764&mid=a10301060100">국가데이터처 2024년 생활시간조사</a></div>
+  <div class="footer-center">TIMECRUSH · BY 국가데이터처 청년인턴 1팀 STAT-OFFICIAL</div>
+  <div class="footer-right">분석과 정책 정보는 연구·탐색용</div>
+</footer>
+<script type="application/json" id="data">__PAYLOAD__</script>
+<script>
+'use strict';
+const data=JSON.parse(document.getElementById('data').textContent);
+const $=id=>document.getElementById(id);
+const fmt=new Intl.NumberFormat('ko-KR');
+const mins=n=>fmt.format(Math.round(n))+'분';
+const pct=n=>(100*n).toFixed(1)+'%';
+const activities=[
+  ['sleep','수면','#2c2a2e'],['personal','식사·개인관리','#827e78'],['work','근로','#56505a'],
+  ['commute','출근·퇴근','#a49f9e'],['study','학습','#777382'],['jobsearch','구직·창업','#c7c3c7'],
+  ['housework','가사','#b8b2a3'],['care','돌봄','#958d80'],['discretionary','재량시간','var(--blue)']
+];
+const inputActivities=activities.filter(([key])=>key!=='discretionary');
+const sliders=[
+  ['work','근로','work'],['commute','통근','commute'],['housework','가사','house_care'],
+  ['care','돌봄','house_care'],['study_job','학습·구직','study_job']
+];
+const sliderRange=240;
+const sleepThreshold=420;
+const weeklyThreshold=52;
+const severeThreshold=60;
+// Weighted shares of mutually exclusive types in the 4,920 youth weekday diaries.
+// Sleep uses main activity 111. Weekly hours are main plus side job hours; non-employed diaries have no work signal.
+const typeBenchmarks=data.signal_type_benchmarks;
+const reasonLabels={work:'장시간 근로',commute:'장거리 통근',study_job:'학습·구직',housework:'가사',sleep:'긴 수면',care:'돌봄'};
+const outcomeLabels={lack:'항상 시간부족',fatigue:'매우 피곤',leisure_dissatisfaction:'여가 불만족',life_dissatisfaction:'삶 불만족'};
+const statusLabels={1:'취업',3:'미취업'};
+const fields=Object.fromEntries(activities.map(([k,v])=>[k,v]));
+const storageKey='youth-time-diary-v1';
+let record=null;
+let displayStep=0;
+let typeIndex=null;
+const adjustments=Object.fromEntries(sliders.map(([key])=>[key,0]));
+const line=data.cutoff;
+const esc=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const classification=n=>Math.abs(n-line)<=20?'경계선':n<line?'기준선 미만':'기준선 이상';
+const metric=(v,t)=>'<div class="metric"><strong>'+esc(v)+'</strong><small>'+esc(t)+'</small></div>';
+const signedMins=n=>(n>0?'+':n<0?'−':'')+mins(Math.abs(n));
+$('sliders').innerHTML=sliders.map(([key,label])=>'<label class="slider-row" for="sim-'+key+'">'+
+  '<span class="slider-title"><span>'+label+'</span><output id="value-'+key+'" for="sim-'+key+'"></output></span>'+
+  '<span class="slider-track"><input type="range" id="sim-'+key+'" aria-label="'+label+' 시간 조정" min="-'+sliderRange+'" max="'+sliderRange+'" value="0" step="1"></span>'+
+  '<span class="slider-scale" aria-hidden="true"><span>−'+sliderRange+'분</span><span>0 · 입력값</span><span>+'+sliderRange+'분</span></span></label>').join('');
+$('heroSample').textContent='만 19–34세 · 평일 일지 '+fmt.format(data.benchmark.diaries)+'건';
+for(let a=19;a<=34;a++) $('age').add(new Option(a+'세',a));
+$('age').value='27';
+$('times').innerHTML=inputActivities.map(([key,label])=>'<label class="field">'+label+'<span class="time-inputs"><input required type="number" id="'+key+'-hours" name="yt-'+key+'-hours" min="0" max="24" step="1" value="0" inputmode="numeric" autocomplete="off" autocorrect="off" spellcheck="false" data-1p-ignore="true" data-lpignore="true" aria-label="'+label+' 시간"><span class="time-unit">시간</span><input required type="number" id="'+key+'-minutes" name="yt-'+key+'-minutes" min="0" max="59" step="1" value="0" inputmode="numeric" autocomplete="off" autocorrect="off" spellcheck="false" data-1p-ignore="true" data-lpignore="true" aria-label="'+label+' 분"><span class="time-unit">분</span></span></label>').join('')+'<div class="field auto-field"><span>재량시간</span><output class="auto-time" id="discretionary-display">24시간 00분</output><small>1,440분에서 나머지 행동시간을 뺀 값이 자동으로 계산됩니다.</small></div>';
+function readActivity(key){
+  const h=$(key+'-hours').valueAsNumber,m=$(key+'-minutes').valueAsNumber;
+  return Number.isFinite(h)&&Number.isFinite(m)?h*60+m:NaN;
+}
+function setActivity(key,total){
+  $(key+'-hours').value=Math.floor(total/60);
+  $(key+'-minutes').value=total%60;
+}
+function clockMins(n){
+  const safe=Math.max(0,Math.round(n));
+  return Math.floor(safe/60)+'시간 '+String(safe%60).padStart(2,'0')+'분';
+}
+function values(){
+  const out=Object.fromEntries(inputActivities.map(([key])=>[key,readActivity(key)]));
+  const used=Object.values(out).reduce((a,b)=>a+(Number.isFinite(b)?b:0),0);
+  out.discretionary=1440-used;
+  return out;
+}
+function balance(){
+  const v=values();
+  const entered=inputActivities.map(([key])=>v[key]);
+  const valid=entered.every(n=>Number.isInteger(n)&&n>=0&&n<=1440);
+  const used=entered.reduce((a,b)=>a+(Number.isFinite(b)?b:0),0);
+  const remaining=1440-used;
+  $('discretionary-display').textContent=remaining>=0?clockMins(remaining):'0시간 00분';
+  const weekly=$('weekly').value===''?null:$('weekly').valueAsNumber;
+  const validWeekly=!$('weekly').validity.badInput&&(weekly===null||Number.isFinite(weekly)&&weekly>=0&&weekly<=168);
+  const ready=valid&&validWeekly&&remaining>=0;
+  $('balance').textContent=!validWeekly?'주당 근로시간은 0~168시간으로 입력해 주세요.':!valid?'행동시간은 시간 0~24, 분 0~59 범위로 입력해 주세요.':remaining<0?'입력한 행동시간이 하루 24시간을 '+mins(Math.abs(remaining))+' 초과했어요.':'재량시간 '+clockMins(remaining)+' · 하루 24시간이 자동으로 맞춰졌어요.';
+  $('balance').classList.toggle('warning',!ready);
+  $('diagnose').disabled=!ready;
+}
+function show(step,scrollToNav=true){
+  if(step>0&&!record) return;
+  displayStep=step;
+  document.querySelectorAll('.panel').forEach((p,i)=>p.hidden=i!==step);
+  document.querySelectorAll('[data-step]').forEach((b,i)=>{
+    if(i===step) b.setAttribute('aria-current','step'); else b.removeAttribute('aria-current');
+    b.disabled=i>0&&!record;
+  });
+  const panel=$('p'+step);
+  const heading=panel.querySelector('h2');
+  heading.focus({preventScroll:true});
+  if(scrollToNav){
+    requestAnimationFrame(()=>{
+      const main=document.querySelector('main');
+      const top=main?main.getBoundingClientRect().top+window.scrollY:window.scrollY+panel.getBoundingClientRect().top;
+      window.scrollTo({top:Math.max(0,top),behavior:'smooth'});
+    });
+  }
+}
+function invalidate(){
+  if(record&&displayStep===0){record=null;show(0,false);}
+  balance();
+}
+function signalState(time,weekly,sleep){
+  return {free:time.discretionary<line,sleep:sleep<sleepThreshold,
+    overwork:weekly===null?null:weekly>weeklyThreshold,
+    severe:weekly!==null&&weekly>severeThreshold};
+}
+function resultType(signals){
+  const count=[signals.free,signals.sleep,signals.overwork].filter(Boolean).length;
+  if(count>=2) return ['complex','복합형'];
+  if(signals.overwork) return ['overwork','과로형'];
+  if(signals.sleep) return ['sleep','수면 부족형'];
+  if(signals.free) return ['discretionary','자유시간 빈곤형'];
+  return ['none','켜진 신호 없음'];
+}
+function signalCards(){
+  const s=record.signals;
+  const entries=[
+    ['자유시간 부족',s.free,mins(record.time.discretionary)+' · '+line+'분 미만'],
+    ['수면 부족',s.sleep,mins(record.actualSleep)+' · 7시간 미만'],
+    ['과로',s.overwork,fmt.format(record.weekly)+'시간/주 · 52시간 초과']
+  ];
+  return '<div class="signal-grid">'+entries.map(([label,active,caption],i)=>{
+    const state=active===null?'unknown':active?'on':'off';
+    const text=state==='unknown'?'미판정':state==='off'?'꺼짐':i===2&&s.severe?'켜짐 · 심각':'켜짐';
+    return '<div class="signal" data-state="'+state+'"><div class="signal-state">'+text+'</div><br><strong>'+label+'</strong><small>'+caption+'</small></div>';
+  }).join('')+'</div>';
+}
+function renderReport(){
+  const v=record.time,d=v.discretionary;
+  const stack=activities.map(([k,l,c])=>'<span style="width:'+100*v[k]/1440+'%;background:'+c+'" title="'+l+' '+mins(v[k])+'"></span>').join('');
+  const legend=activities.map(([k,l,c])=>'<span><i class="swatch" style="background:'+c+'"></i>'+l+' '+mins(v[k])+'</span>').join('');
+  $('report').innerHTML='<div class="metrics">'+metric(mins(d),'내 재량시간')+metric(mins(line),'연구 기준선')+metric(classification(d),'오늘의 진단')+'</div>'+
+    '<h3>시간 신호등</h3>'+signalCards()+
+    '<div class="stack" aria-hidden="true">'+stack+'</div><div class="legend">'+legend+'</div>'+
+    '<p class="notice '+(Math.abs(d-line)<=20?'warning':'')+'">연구상 '+line+'분 미만을 시간빈곤 일지로 분류합니다. 기준선에서 20분 이내면 입력 오차를 고려해 경계선으로 표시합니다.</p>';
+}
+function renderCompare(){
+  const band=record.age<=24?'19–24':record.age<=29?'25–29':'30–34';
+  const order=[['age_group','status','child'],['age_group','status'],['status','child'],['status'],['age_group']];
+  const key={age_group:band,status:record.status,child:record.child};
+  let group=null;
+  for(const keys of order){
+    group=data.groups.find(g=>Object.keys(key).every(k=>keys.includes(k)?g[k]===key[k]:!(k in g)));
+    if(group) break;
+  }
+  group??=data.benchmark;
+  const labels=[];
+  if(group.age_group) labels.push(group.age_group+'세');
+  if(group.status) labels.push(statusLabels[group.status]);
+  if('child' in group) labels.push(group.child?'미취학 자녀 있음':'미취학 자녀 없음');
+  const gap=record.time.discretionary-group.median;
+  const chartActivities=activities;
+  const refs=group.activities||data.benchmark.activities||{};
+  const refValues=chartActivities.flatMap(([k])=>{
+    const r=refs[k]||{};
+    return [r.mean,r.median].filter(Number.isFinite);
+  });
+  const maxValue=Math.max(...chartActivities.map(([k])=>record.time[k]),...refValues,group.mean,group.median,1);
+  const rows=chartActivities.map(([k,label])=>{
+    const value=record.time[k];
+    const stat=refs[k]||{};
+    const median=Number.isFinite(stat.median)?stat.median:(k==='discretionary'?group.median:null);
+    const mean=Number.isFinite(stat.mean)?stat.mean:(k==='discretionary'?group.mean:null);
+    const marker=v=>!Number.isFinite(v)?'':'<i class="ref-median" style="left:'+Math.min(100,100*v/maxValue)+'%"></i>';
+    const meanMarker=!Number.isFinite(mean)?'':'<i class="ref-mean" style="left:'+Math.min(100,100*mean/maxValue)+'%"></i>';
+    const meta=Number.isFinite(median)&&Number.isFinite(mean)?'<span class="day-meta">중앙 '+clockMins(median)+' · 평균 '+clockMins(mean)+'</span>':'';
+    return '<div class="day-row"><span class="day-label">'+esc(label)+'</span><div class="day-track" aria-hidden="true"><div class="day-bar" style="width:'+(value===0?0:Math.max(1,100*value/maxValue))+'%"></div>'+marker(median)+meanMarker+'</div><span class="day-value">'+clockMins(value)+meta+'</span></div>';
+  }).join('');
+  $('compare').innerHTML='<p><strong>'+esc(labels.join(' · ')||'전체 청년')+'</strong> · 일지 '+fmt.format(group.diaries)+'건 / '+fmt.format(group.people)+'명</p>'+ 
+    '<div class="compare-lead"><div><small>내 재량시간</small><strong>'+clockMins(record.time.discretionary)+'</strong></div><div><small>비슷한 청년 · 가중 중앙값</small><strong>'+clockMins(group.median)+'</strong></div><div><small>중앙값과의 차이</small><strong>'+signedMins(gap)+'</strong></div></div>'+ 
+    '<h3>내 하루의 시간 구성</h3>'+
+    '<div class="chart-legend"><span><i class="legend-line"></i>내 시간</span><span><i class="legend-median">MED</i>중앙값</span><span><i class="legend-mean">AVG</i>평균</span></div><div class="day-chart">'+rows+'</div>';
+}
+function totalAdjustment(){
+  return Object.values(adjustments).reduce((total,delta)=>total+delta,0);
+}
+function updateAdjustment(key,requested){
+  const initial=record.time[key];
+  const remaining=record.time.discretionary-totalAdjustment()+adjustments[key];
+  const allowed=Math.max(-initial,Math.min(remaining,requested));
+  adjustments[key]=allowed;
+  renderSim(allowed===requested?'':requested<allowed
+    ?'해당 활동을 0분까지 줄였어요.'
+    :'늘릴 수 있는 재량시간을 모두 사용했어요.');
+}
+function resetSimulation(){
+  sliders.forEach(([key])=>{adjustments[key]=0;});
+  renderSim();
+}
+function renderSim(limitMessage=''){
+  sliders.forEach(([key])=>{
+    const initial=record.time[key];
+    const delta=adjustments[key];
+    const input=$('sim-'+key);
+    input.value=delta;
+    input.style.setProperty('--position',(50+50*delta/sliderRange)+'%');
+    input.setAttribute('aria-valuetext',mins(initial+delta)+' · '+signedMins(delta));
+    $('value-'+key).textContent=mins(initial)+' → '+mins(initial+delta)+' ('+signedMins(delta)+')';
+  });
+  const change=-totalAdjustment();
+  const after=record.time.discretionary+change;
+  $('simLimits').textContent=limitMessage||'활동시간과 재량시간은 0분 이상이며 하루 합계는 1,440분입니다.';
+  const changes=sliders.filter(([key])=>adjustments[key]!==0);
+  const donor=changes.length?changes[0][2]:null;
+  const compatible=changes.length&&changes.every(([key,,group])=>group===donor&&adjustments[key]<0);
+  const table=compatible&&change<record.time[donor]&&record.time.discretionary>0
+    ?data.coda.filter(r=>r.donor===donor&&r.moved_min===change).map(r=>
+      '<li>'+esc(outcomeLabels[r.outcome])+': '+(r.delta_percentage_points>0?'+':'')+
+      r.delta_percentage_points.toFixed(1)+'%p (95% 구간 '+r.conditional_ci95_low_pp.toFixed(1)+'~'+
+      r.conditional_ci95_high_pp.toFixed(1)+'%p) · 일지 '+fmt.format(r.modeled_n)+'건</li>').join('')
+    :'';
+  $('simulation').innerHTML='<div class="metrics">'+metric(signedMins(change),'재량시간 증감')+
+    metric(mins(after),'변경 후 재량시간')+metric(classification(after),'변경 후 진단')+'</div>'+
+    '<h3>조사 자료에서 본 재배분</h3><p class="quiet">같은 활동 조합을 유지하며 이동할 수 있었던 조사 일지의 평균 모형 예측 변화입니다. 입력하신 개인의 예측이나 인과효과로 해석할 수 없습니다.</p>'+
+    (table?'<ul>'+table+'</ul>':'<p class="notice">모형 결과는 한 활동군에서 10·20·30·45·60분을 줄여 재량으로 옮기고 두 활동군의 시간이 모두 남는 시나리오에 제공됩니다.</p>');
+}
+function explainFreeTime(model,z){
+  const ranked=model.fields.filter(key=>key in reasonLabels)
+    .map(key=>({key,score:z[model.fields.indexOf(key)]}))
+    .sort((a,b)=>b.score-a.score);
+  const strongest=ranked[0];
+  if(strongest.score<=0) return '<p class="notice">여섯 활동 중 비교 기준보다 두드러지게 긴 항목이 없습니다.</p>';
+  return '<p class="notice"><strong>'+reasonLabels[strongest.key]+'</strong> · 시간빈곤 일지의 활동별 평균과 표준편차를 기준으로 가장 높은 항목입니다.</p>';
+}
+function renderType(){
+  const signals=record.signals;
+  const [key,label]=resultType(signals);
+  const detected=[signals.free,signals.sleep,signals.overwork].filter(Boolean).length;
+  const reference=signals.overwork!==null && key in typeBenchmarks
+    ?' · 조사 일지에서 같은 유형 '+typeBenchmarks[key].toFixed(1)+'%'
+    :'';
+  const scope='';
+  const intro='<h3>01 · 시간 신호등</h3>'+signalCards()+
+    '<div class="type-head"><p class="section-kicker">02 / YOUR PROFILE</p><h3>'+label+
+    (signals.severe?' · 과로 심각':'')+'</h3><p>켜진 신호 '+detected+'개'+reference+'</p></div>'+scope+
+    (reference?'<p class="quiet">2024년 만 19–34세 평일 일지 4,920건의 가중 비율입니다.</p>':'');
+  typeIndex=null;
+  let researchBlock='';
+  if(signals.free){
+    const model=data.cluster;
+    const z=model.fields.map((k,i)=>(record.time[k]-model.means[i])/model.scales[i]);
+    const distances=model.centers.map(c=>Math.hypot(...c.map((v,i)=>v-z[i])));
+    typeIndex=distances.indexOf(Math.min(...distances));
+    const p=data.profiles.find(x=>x.cluster===typeIndex);
+    const labels={...fields,study_job:'학습·구직'};
+    const profiles=model.fields.map(k=>'<div class="profile"><span>'+esc(labels[k])+'</span><progress max="1440" value="'+p[k]+'" aria-label="'+esc(labels[k])+' 유형 평균"></progress><span>'+mins(p[k])+'</span></div>').join('');
+    researchBlock='<h3>자유시간을 압박한 활동</h3>'+explainFreeTime(model,z)+
+      '<p class="quiet">설명 항목은 장시간 근로·장거리 통근·학습·구직·가사·긴 수면·돌봄입니다. 아래에는 연구 모형에서 가장 가까운 군집을 따로 표시합니다.</p>'+ 
+      '<details open><summary>내 연구 유형 · '+esc(p.name)+'</summary><p class="quiet">아래 막대는 가장 가까운 연구 군집의 일지 평균입니다.</p>'+profiles+'</details>';
+  } else {
+    researchBlock='<p class="notice">재량시간이 기준선 이상이라 연구 군집을 개인 유형으로 배정하지 않습니다. 아래에서 시간빈곤 청년에게 관찰된 연구 유형 전체를 확인할 수 있습니다.</p>';
+  }
+  const descriptions={
+    '근로 시간 집중형':'근로와 출퇴근에 하루 시간이 많이 배분된 유형입니다.',
+    '학습·구직 시간 집중형':'학습·구직 활동에 시간이 집중되고 근로시간은 상대적으로 짧은 유형입니다.',
+    '돌봄 시간 집중형':'가사와 가족 돌봄 시간이 크게 나타나는 유형입니다.'
+  };
+  const catalog=data.profiles.map((p,i)=>'<article class="type-card '+(i===typeIndex?'is-mine':'')+'"><span class="type-no">0'+(i+1)+' / TYPE</span><span class="type-share">'+(100*p.weighted_share).toFixed(1)+'%</span><h4>'+esc(p.name)+(i===typeIndex?' · 내 유형':'')+'</h4><p class="quiet">'+esc(descriptions[p.name]||'생활시간 구성에 따라 구분된 연구 유형입니다.')+'</p></article>').join('');
+  $('type').innerHTML=intro+researchBlock+'<h3 style="margin-top:46px">다른 유형 한눈에 보기</h3><p class="quiet">시간빈곤 청년 1,095개 일지를 군집화한 세 가지 연구 유형입니다. 비율은 해당 분석대상 안의 가중 비중입니다.</p><div class="type-catalog">'+catalog+'</div>';
+}
+function renderSignalGuidance(){
+  const signals=record.signals;
+  const groups=[];
+  if(signals.overwork){
+    const counsel=data.policies.find(p=>p.policy_id==='labor-counsel');
+    groups.push(['과로 신호',[
+      [counsel.official_url,'고용노동부 1350 근로시간 상담'],
+      ['https://labor.moel.go.kr/applyGuide/portal_follow.do','고용노동부 노동포털 진정·신고 안내']
+    ]]);
+  }
+  $('signalGuidance').innerHTML=groups.map(([title,links])=>
+    '<section class="guide-list"><h3>'+title+'에 따른 안내</h3><ul>'+links.map(([url,name])=>
+      '<li><a target="_blank" rel="noopener noreferrer" href="'+esc(url)+'">'+esc(name)+'</a></li>').join('')+
+    '</ul></section>').join('');
+}
+function renderPolicies(){
+  renderSignalGuidance();
+  const tagByField={work:'work',commute:'commute',study_job:'study',housework:'care',care:'care',sleep:'sleep'};
+  const dominant=typeIndex===null?[]:data.cluster.fields.map((k,i)=>[k,data.cluster.centers[typeIndex][i]]).sort((a,b)=>b[1]-a[1]).slice(0,2).map(x=>tagByField[x[0]]).filter(Boolean);
+  const priorities=new Set(dominant);
+  if(record.child===1) priorities.add('care');
+  if(record.status===3||record.time.study_job>=90) priorities.add('study');
+  if(record.time.commute>=60) priorities.add('commute');
+  if(record.time.work>=480) priorities.add('work');
+  if(record.signals.sleep) priorities.add('sleep');
+  const policies=data.policies.filter(p=>p.display&&(!p.age_min||record.age>=p.age_min)&&(!p.age_max||record.age<=p.age_max))
+    .filter(p=>p.policy_id!=='childcare-hours'||record.status===1)
+    .sort((a,b)=>Number(priorities.has(b.category))-Number(priorities.has(a.category)));
+  $('policies').innerHTML=policies.map(p=>'<article class="policy"><h3>'+esc(p.policy_name)+'</h3><p>'+
+    (priorities.has(p.category)?'<span class="chip">시간사용 관련</span>':'')+'<span class="chip">'+esc(p.region==='ALL'?'전국 또는 공고별':p.region)+'</span></p>'+
+    '<p>'+esc(p.support_content)+'</p><p class="quiet">대상 · '+esc(p.target_summary)+'<br>신청 · '+esc(p.application_period)+'<br>확인일 · '+esc(p.verified_at)+'</p>'+
+    '<a target="_blank" rel="noopener noreferrer" href="'+esc(p.official_url)+'">운영기관 안내</a></article>').join('');
+}
+function stored(){
+  return JSON.parse(localStorage.getItem(storageKey)||'[]');
+}
+function storageAction(action){
+  try{action();}catch(error){$('recordMessage').textContent='이 브라우저에서 기록을 처리할 수 없어요. 브라우저의 저장 설정을 확인해 주세요.';}
+}
+$('save').addEventListener('click',()=>storageAction(()=>{
+  if(!record||!$('consent').checked){$('recordMessage').textContent='동의란을 선택해 주세요.';return;}
+  const saved=stored();
+  if(saved.length>=100){$('recordMessage').textContent='기록 100건이 저장되어 있어요. 먼저 다운로드하고 삭제해 주세요.';return;}
+  const age=record.age;
+  saved.push({record_date:new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date()),age_group:age<=24?'19–24':age<=29?'25–29':'30–34',employment_status:record.status,
+    child_flag:record.child,...Object.fromEntries(activities.map(([k])=>[k+'_min',record.time[k]])),
+    time_poverty_flag:record.time.discretionary<line,cluster_type:typeIndex===null?null:data.cluster.names[typeIndex]});
+  localStorage.setItem(storageKey,JSON.stringify(saved));
+  $('recordMessage').textContent='이 브라우저에 '+saved.length+'건 저장했어요.';
+}));
+$('export').addEventListener('click',()=>storageAction(()=>{
+  const rows=stored();
+  if(!rows.length){$('recordMessage').textContent='저장한 기록이 없어요.';return;}
+  const a=document.createElement('a');
+  const url=URL.createObjectURL(new Blob([JSON.stringify(rows,null,2)],{type:'application/json'}));
+  a.href=url;a.download='my_time_diaries.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+}));
+$('erase').addEventListener('click',()=>storageAction(()=>{
+  localStorage.removeItem(storageKey);
+  $('recordMessage').textContent='이 브라우저의 저장 기록을 삭제했어요.';
+}));
+$('example').addEventListener('click',()=>{
+  const v={sleep:450,personal:120,work:530,commute:100,study:0,jobsearch:0,housework:100,care:20};
+  inputActivities.forEach(([key])=>setActivity(key,v[key]||0));
+  $('age').value='27';$('status').value='1';$('child').value='0';
+  $('weekly').value='50';
+  invalidate();
+});
+$('entry').addEventListener('input',invalidate);
+$('entry').addEventListener('submit',e=>{
+  e.preventDefault();balance();if($('diagnose').disabled)return;
+  const time=values();
+  time.study_job=time.study+time.jobsearch;
+  time.house_care=time.housework+time.care;
+  const weeklyInput=$('weekly').value===''?null:$('weekly').valueAsNumber;
+  const weekly=weeklyInput===null?(time.work/60)*5:weeklyInput;
+  const actualSleep=time.sleep;
+  record={age:Number($('age').value),status:Number($('status').value),child:$('child').value===''?null:Number($('child').value),
+    time,weekly,actualSleep,signals:signalState(time,weekly,actualSleep)};
+  renderReport();renderCompare();resetSimulation();renderType();renderPolicies();show(1);
+});
+document.querySelectorAll('[data-step]').forEach(b=>b.addEventListener('click',()=>show(Number(b.dataset.step))));
+document.querySelectorAll('[data-next]').forEach(b=>b.addEventListener('click',()=>show(Number(b.dataset.next))));
+sliders.forEach(([key])=>{
+  const input=$('sim-'+key);
+  input.addEventListener('input',()=>updateAdjustment(key,Number(input.value)));
+});
+$('resetSimulation').addEventListener('click',resetSimulation);
+if('scrollRestoration' in history) history.scrollRestoration='manual';
+show(0,false);balance();
+window.scrollTo({top:0,behavior:'auto'});
+</script>
+</body>
+</html>

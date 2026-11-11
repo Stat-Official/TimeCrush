@@ -1,0 +1,1346 @@
+{
+  "benchmark": {
+    "diaries": 4920,
+    "people": 3255,
+    "mean": 265.93815025914165,
+    "median": 230,
+    "poor_rate": 0.22512223062098613,
+    "activities": {
+      "sleep": {
+        "mean": 475.8749048046484,
+        "median": 470.0
+      },
+      "personal": {
+        "mean": 210.63627759440828,
+        "median": 200.0
+      },
+      "work": {
+        "mean": 271.03872805480165,
+        "median": 360.0
+      },
+      "commute": {
+        "mean": 46.594115153994785,
+        "median": 40.0
+      },
+      "study": {
+        "mean": 91.35588729252652,
+        "median": 0.0
+      },
+      "jobsearch": {
+        "mean": 3.050626035688521,
+        "median": 0.0
+      },
+      "housework": {
+        "mean": 57.00570681811757,
+        "median": 30.0
+      },
+      "care": {
+        "mean": 18.50560398667282,
+        "median": 0.0
+      },
+      "discretionary": {
+        "mean": 265.93815025914165,
+        "median": 230.0
+      }
+    }
+  },
+  "cutoff": 138.0,
+  "groups": [
+    {
+      "age_group": "19–24",
+      "diaries": 1430,
+      "people": 956,
+      "mean": 310.9587971094057,
+      "median": 260,
+      "poor_rate": 0.1763992550423445,
+      "activities": {
+        "sleep": {
+          "mean": 484.53182617460214,
+          "median": 480.0
+        },
+        "personal": {
+          "mean": 216.34661834772317,
+          "median": 200.0
+        },
+        "work": {
+          "mean": 157.33623968795075,
+          "median": 0.0
+        },
+        "commute": {
+          "mean": 29.088890526854726,
+          "median": 0.0
+        },
+        "study": {
+          "mean": 193.2529114544967,
+          "median": 40.0
+        },
+        "jobsearch": {
+          "mean": 2.1513521067894303,
+          "median": 0.0
+        },
+        "housework": {
+          "mean": 45.57552224379533,
+          "median": 20.0
+        },
+        "care": {
+          "mean": 0.757842348382004,
+          "median": 0.0
+        },
+        "discretionary": {
+          "mean": 310.9587971094057,
+          "median": 260.0
+        }
+      }
+    },
+    {
+      "age_group": "25–29",
+      "diaries": 1754,
+      "people": 1155,
+      "mean": 264.8541157787564,
+      "median": 230,
+      "poor_rate": 0.2002768222074104,
+      "activities": {
+        "sleep": {
+          "mean": 475.3503643913694,
+          "median": 470.0
+        },
+        "personal": {
+          "mean": 211.5026155066125,
+          "median": 200.0
+        },
+        "work": {
+          "mean": 300.6260503957752,
+          "median": 410.0
+        },
+        "commute": {
+          "mean": 52.60202638578634,
+          "median": 50.0
+        },
+        "study": {
+          "mean": 69.59415515952328,
+          "median": 0.0
+        },
+        "jobsearch": {
+          "mean": 5.334278357888327,
+          "median": 0.0
+        },
+        "housework": {
+          "mean": 52.4020225936142,
+          "median": 30.0
+        },
+        "care": {
+          "mean": 7.7343714306743925,
+          "median": 0.0
+        },
+        "discretionary": {
+          "mean": 264.8541157787564,
+          "median": 230.0
+        }
+      }
+    },
+    {
+      "age_group": "30–34",
+      "diaries": 1736,
+      "people": 1144,
+      "mean": 229.37707365112053,
+      "median": 200,
+      "poor_rate": 0.28995689015449977,
+      "activities": {
+        "sleep": {
+          "mean": 469.15161778158364,
+          "median": 460.0
+        },
+        "personal": {
+          "mean": 205.02409893070097,
+          "median": 190.0
+        },
+        "work": {
+          "mean": 337.3021697601194,
+          "median": 420.0
+        },
+        "commute": {
+          "mean": 55.38501020152818,
+          "median": 50.0
+        },
+        "study": {
+          "mean": 27.356143889418973,
+          "median": 0.0
+        },
+        "jobsearch": {
+          "mean": 1.5842705318744037,
+          "median": 0.0
+        },
+        "housework": {
+          "mean": 71.0260714489739,
+          "median": 40.0
+        },
+        "care": {
+          "mean": 43.793543804679885,
+          "median": 0.0
+        },
+        "discretionary": {
+          "mean": 229.37707365112053,
+          "median": 200.0
+        }
+      }
+    },
+    {
+      "status": 1,
+      "diaries": 3492,
+      "people": 2309,
+      "mean": 230.22395630610154,
+      "median": 210,
+      "poor_rate": 0.25784823731592094,
+      "activities": {
+        "sleep": {
+          "mean": 465.68363485192856,
+          "median": 460.0
+        },
+        "personal": {
+          "mean": 210.7787486149763,
+          "median": 200.0
+        },
+        "work": {
+          "mean": 380.4629763981742,
+          "median": 440.0
+        },
+        "commute": {
+          "mean": 65.4729993595569,
+          "median": 60.0
+        },
+        "study": {
+          "mean": 33.16078399868022,
+          "median": 0.0
+        },
+        "jobsearch": {
+          "mean": 1.4369349992869471,
+          "median": 0.0
+        },
+        "housework": {
+          "mean": 43.78090771318776,
+          "median": 20.0
+        },
+        "care": {
+          "mean": 8.999057758107515,
+          "median": 0.0
+        },
+        "discretionary": {
+          "mean": 230.22395630610154,
+          "median": 210.0
+        }
+      }
+    },
+    {
+      "status": 3,
+      "diaries": 1428,
+      "people": 946,
+      "mean": 353.8636278111842,
+      "median": 330,
+      "poor_rate": 0.14455343013771088,
+      "activities": {
+        "sleep": {
+          "mean": 500.9649930377159,
+          "median": 490.0
+        },
+        "personal": {
+          "mean": 210.28552538263367,
+          "median": 190.0
+        },
+        "work": {
+          "mean": 1.6450157393274092,
+          "median": 0.0
+        },
+        "commute": {
+          "mean": 0.11581827274981421,
+          "median": 0.0
+        },
+        "study": {
+          "mean": 234.62755835501503,
+          "median": 160.0
+        },
+        "jobsearch": {
+          "mean": 7.023403782923135,
+          "median": 0.0
+        },
+        "housework": {
+          "mean": 89.56410022214386,
+          "median": 50.0
+        },
+        "care": {
+          "mean": 41.90995739630708,
+          "median": 0.0
+        },
+        "discretionary": {
+          "mean": 353.8636278111842,
+          "median": 330.0
+        }
+      }
+    },
+    {
+      "child": 0,
+      "diaries": 4470,
+      "people": 2952,
+      "mean": 273.50669165308875,
+      "median": 240,
+      "poor_rate": 0.2073547206153285,
+      "activities": {
+        "sleep": {
+          "mean": 475.9913242494353,
+          "median": 470.0
+        },
+        "personal": {
+          "mean": 212.62951848535718,
+          "median": 200.0
+        },
+        "work": {
+          "mean": 274.03638543301236,
+          "median": 370.0
+        },
+        "commute": {
+          "mean": 47.55183337433623,
+          "median": 40.0
+        },
+        "study": {
+          "mean": 98.45751242176406,
+          "median": 0.0
+        },
+        "jobsearch": {
+          "mean": 3.2777319164333583,
+          "median": 0.0
+        },
+        "housework": {
+          "mean": 52.17811849246835,
+          "median": 30.0
+        },
+        "care": {
+          "mean": 2.370883974104453,
+          "median": 0.0
+        },
+        "discretionary": {
+          "mean": 273.50669165308875,
+          "median": 240.0
+        }
+      }
+    },
+    {
+      "child": 1,
+      "diaries": 450,
+      "people": 303,
+      "mean": 176.41041895465605,
+      "median": 150,
+      "poor_rate": 0.43529282742956105,
+      "activities": {
+        "sleep": {
+          "mean": 474.49778757307155,
+          "median": 470.0
+        },
+        "personal": {
+          "mean": 187.05837458489296,
+          "median": 170.0
+        },
+        "work": {
+          "mean": 235.5796547234482,
+          "median": 190.0
+        },
+        "commute": {
+          "mean": 35.26533526984031,
+          "median": 20.0
+        },
+        "study": {
+          "mean": 7.351274870900765,
+          "median": 0.0
+        },
+        "jobsearch": {
+          "mean": 0.3642069212667093,
+          "median": 0.0
+        },
+        "housework": {
+          "mean": 114.11090159356563,
+          "median": 90.0
+        },
+        "care": {
+          "mean": 209.3620455083578,
+          "median": 170.0
+        },
+        "discretionary": {
+          "mean": 176.41041895465605,
+          "median": 150.0
+        }
+      }
+    },
+    {
+      "status": 1,
+      "child": 0,
+      "diaries": 3206,
+      "people": 2117,
+      "mean": 235.7719317924468,
+      "median": 210,
+      "poor_rate": 0.23815382249952152,
+      "activities": {
+        "sleep": {
+          "mean": 465.98525338815494,
+          "median": 460.0
+        },
+        "personal": {
+          "mean": 211.6220483263404,
+          "median": 200.0
+        },
+        "work": {
+          "mean": 379.2539954599231,
+          "median": 440.0
+        },
+        "commute": {
+          "mean": 65.88195618256006,
+          "median": 60.0
+        },
+        "study": {
+          "mean": 35.25316445435996,
+          "median": 0.0
+        },
+        "jobsearch": {
+          "mean": 1.5356765198662659,
+          "median": 0.0
+        },
+        "housework": {
+          "mean": 42.975594868284404,
+          "median": 20.0
+        },
+        "care": {
+          "mean": 1.7203790080641597,
+          "median": 0.0
+        },
+        "discretionary": {
+          "mean": 235.7719317924468,
+          "median": 210.0
+        }
+      }
+    },
+    {
+      "status": 1,
+      "child": 1,
+      "diaries": 286,
+      "people": 192,
+      "mean": 150.2604295966496,
+      "median": 120,
+      "poor_rate": 0.5417058118625595,
+      "activities": {
+        "sleep": {
+          "mean": 461.336376660728,
+          "median": 450.0
+        },
+        "personal": {
+          "mean": 198.6241853585775,
+          "median": 190.0
+        },
+        "work": {
+          "mean": 397.8881398267073,
+          "median": 440.0
+        },
+        "commute": {
+          "mean": 59.578663683468925,
+          "median": 50.0
+        },
+        "study": {
+          "mean": 3.003094790089538,
+          "median": 0.0
+        },
+        "jobsearch": {
+          "mean": 0.013763567183611634,
+          "median": 0.0
+        },
+        "housework": {
+          "mean": 55.38796245619897,
+          "median": 30.0
+        },
+        "care": {
+          "mean": 113.90738406039641,
+          "median": 90.0
+        },
+        "discretionary": {
+          "mean": 150.2604295966496,
+          "median": 120.0
+        }
+      }
+    },
+    {
+      "status": 3,
+      "child": 0,
+      "diaries": 1264,
+      "people": 835,
+      "mean": 371.1299218283819,
+      "median": 360,
+      "poor_rate": 0.12767466372515784,
+      "activities": {
+        "sleep": {
+          "mean": 501.8779328418467,
+          "median": 490.0
+        },
+        "personal": {
+          "mean": 215.235934733709,
+          "median": 200.0
+        },
+        "work": {
+          "mean": 1.8289300235797858,
+          "median": 0.0
+        },
+        "commute": {
+          "mean": 0.1301509611654821,
+          "median": 0.0
+        },
+        "study": {
+          "mean": 261.9728662358175,
+          "median": 220.0
+        },
+        "jobsearch": {
+          "mean": 7.784586487265324,
+          "median": 0.0
+        },
+        "housework": {
+          "mean": 75.98587784419301,
+          "median": 40.0
+        },
+        "care": {
+          "mean": 4.053799044041312,
+          "median": 0.0
+        },
+        "discretionary": {
+          "mean": 371.1299218283819,
+          "median": 360.0
+        }
+      }
+    },
+    {
+      "status": 3,
+      "child": 1,
+      "diaries": 164,
+      "people": 111,
+      "mean": 214.33974423354002,
+      "median": 190,
+      "poor_rate": 0.28094581622436327,
+      "activities": {
+        "sleep": {
+          "mean": 493.5877928801096,
+          "median": 480.0
+        },
+        "personal": {
+          "mean": 170.28271196632332,
+          "median": 150.0
+        },
+        "work": {
+          "mean": 0.15885807522555978,
+          "median": 0.0
+        },
+        "commute": {
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "study": {
+          "mean": 13.658104843118627,
+          "median": 0.0
+        },
+        "jobsearch": {
+          "mean": 0.8725084653654738,
+          "median": 0.0
+        },
+        "housework": {
+          "mean": 199.28575307744745,
+          "median": 190.0
+        },
+        "care": {
+          "mean": 347.81452645886975,
+          "median": 350.0
+        },
+        "discretionary": {
+          "mean": 214.33974423354002,
+          "median": 190.0
+        }
+      }
+    },
+    {
+      "age_group": "19–24",
+      "status": 1,
+      "diaries": 756,
+      "people": 510,
+      "mean": 266.01346953724675,
+      "median": 230,
+      "poor_rate": 0.21357892214287377,
+      "activities": {
+        "sleep": {
+          "mean": 472.4289306051127,
+          "median": 470.0
+        },
+        "personal": {
+          "mean": 216.39050224463165,
+          "median": 200.0
+        },
+        "work": {
+          "mean": 287.64239615647284,
+          "median": 340.0
+        },
+        "commute": {
+          "mean": 53.1512978800504,
+          "median": 40.0
+        },
+        "study": {
+          "mean": 101.00211851642804,
+          "median": 0.0
+        },
+        "jobsearch": {
+          "mean": 1.2536206866997386,
+          "median": 0.0
+        },
+        "housework": {
+          "mean": 41.7693152628674,
+          "median": 20.0
+        },
+        "care": {
+          "mean": 0.34834911049043465,
+          "median": 0.0
+        },
+        "discretionary": {
+          "mean": 266.01346953724675,
+          "median": 230.0
+        }
+      }
+    },
+    {
+      "age_group": "19–24",
+      "status": 3,
+      "diaries": 674,
+      "people": 446,
+      "mean": 364.9204883517752,
+      "median": 350,
+      "poor_rate": 0.13176107294540015,
+      "activities": {
+        "sleep": {
+          "mean": 499.06265171616496,
+          "median": 480.0
+        },
+        "personal": {
+          "mean": 216.29393101795156,
+          "median": 200.0
+        },
+        "work": {
+          "mean": 0.889708709947106,
+          "median": 0.0
+        },
+        "commute": {
+          "mean": 0.199387072760845,
+          "median": 0.0
+        },
+        "study": {
+          "mean": 304.0098927535143,
+          "median": 310.0
+        },
+        "jobsearch": {
+          "mean": 3.2291750602806313,
+          "median": 0.0
+        },
+        "housework": {
+          "mean": 50.145282372468,
+          "median": 20.0
+        },
+        "care": {
+          "mean": 1.2494829451374019,
+          "median": 0.0
+        },
+        "discretionary": {
+          "mean": 364.9204883517752,
+          "median": 350.0
+        }
+      }
+    },
+    {
+      "age_group": "25–29",
+      "status": 1,
+      "diaries": 1319,
+      "people": 871,
+      "mean": 233.55232915512286,
+      "median": 210,
+      "poor_rate": 0.22170417549602822,
+      "activities": {
+        "sleep": {
+          "mean": 465.0145474788794,
+          "median": 460.0
+        },
+        "personal": {
+          "mean": 211.24427287518375,
+          "median": 200.0
+        },
+        "work": {
+          "mean": 395.97072152729424,
+          "median": 440.0
+        },
+        "commute": {
+          "mean": 69.42285822152272,
+          "median": 60.0
+        },
+        "study": {
+          "mean": 17.698755556835174,
+          "median": 0.0
+        },
+        "jobsearch": {
+          "mean": 2.8889524930478694,
+          "median": 0.0
+        },
+        "housework": {
+          "mean": 40.9412687178275,
+          "median": 20.0
+        },
+        "care": {
+          "mean": 3.266293974286543,
+          "median": 0.0
+        },
+        "discretionary": {
+          "mean": 233.55232915512286,
+          "median": 210.0
+        }
+      }
+    },
+    {
+      "age_group": "25–29",
+      "status": 3,
+      "diaries": 435,
+      "people": 284,
+      "mean": 362.689920928255,
+      "median": 350,
+      "poor_rate": 0.1333042117803787,
+      "activities": {
+        "sleep": {
+          "mean": 507.6556440123021,
+          "median": 500.0
+        },
+        "personal": {
+          "mean": 212.31008249417377,
+          "median": 190.0
+        },
+        "work": {
+          "mean": 2.619972371354392,
+          "median": 0.0
+        },
+        "commute": {
+          "mean": 0.027403546492532096,
+          "median": 0.0
+        },
+        "study": {
+          "mean": 231.79666023476196,
+          "median": 130.0
+        },
+        "jobsearch": {
+          "mean": 12.97730614145031,
+          "median": 0.0
+        },
+        "housework": {
+          "mean": 88.22336712387313,
+          "median": 60.0
+        },
+        "care": {
+          "mean": 21.699643147336722,
+          "median": 0.0
+        },
+        "discretionary": {
+          "mean": 362.689920928255,
+          "median": 350.0
+        }
+      }
+    },
+    {
+      "age_group": "30–34",
+      "status": 1,
+      "diaries": 1417,
+      "people": 928,
+      "mean": 206.89766269741276,
+      "median": 190,
+      "poor_rate": 0.31599610403042294,
+      "activities": {
+        "sleep": {
+          "mean": 462.4730891733844,
+          "median": 450.0
+        },
+        "personal": {
+          "mean": 207.1727655650957,
+          "median": 200.0
+        },
+        "work": {
+          "mean": 418.87955850539737,
+          "median": 450.0
+        },
+        "commute": {
+          "mean": 68.84280898941998,
+          "median": 60.0
+        },
+        "study": {
+          "mean": 8.858094369878751,
+          "median": 0.0
+        },
+        "jobsearch": {
+          "mean": 0.21267768537296675,
+          "median": 0.0
+        },
+        "housework": {
+          "mean": 47.51825523674247,
+          "median": 30.0
+        },
+        "care": {
+          "mean": 19.14508777729563,
+          "median": 0.0
+        },
+        "discretionary": {
+          "mean": 206.89766269741276,
+          "median": 190.0
+        }
+      }
+    },
+    {
+      "age_group": "30–34",
+      "status": 3,
+      "diaries": 319,
+      "people": 216,
+      "mean": 321.789884650328,
+      "median": 300,
+      "poor_rate": 0.18290973685323794,
+      "activities": {
+        "sleep": {
+          "mean": 496.6070347982168,
+          "median": 480.0
+        },
+        "personal": {
+          "mean": 196.19093493038415,
+          "median": 180.0
+        },
+        "work": {
+          "mean": 1.9376967563111351,
+          "median": 0.0
+        },
+        "commute": {
+          "mean": 0.06002778041745289,
+          "median": 0.0
+        },
+        "study": {
+          "mean": 103.40158643342356,
+          "median": 0.0
+        },
+        "jobsearch": {
+          "mean": 7.222885829785297,
+          "median": 0.0
+        },
+        "housework": {
+          "mean": 167.66665429604043,
+          "median": 170.0
+        },
+        "care": {
+          "mean": 145.12329452509329,
+          "median": 0.0
+        },
+        "discretionary": {
+          "mean": 321.789884650328,
+          "median": 300.0
+        }
+      }
+    },
+    {
+      "age_group": "19–24",
+      "status": 1,
+      "child": 0,
+      "diaries": 754,
+      "people": 508,
+      "mean": 266.0128607261251,
+      "median": 230,
+      "poor_rate": 0.21390619787288237,
+      "activities": {
+        "sleep": {
+          "mean": 472.3994306269365,
+          "median": 470.0
+        },
+        "personal": {
+          "mean": 216.43679109991294,
+          "median": 200.0
+        },
+        "work": {
+          "mean": 287.7090740048681,
+          "median": 340.0
+        },
+        "commute": {
+          "mean": 53.16887504355385,
+          "median": 40.0
+        },
+        "study": {
+          "mean": 100.87172026903323,
+          "median": 0.0
+        },
+        "jobsearch": {
+          "mean": 1.2555416610228467,
+          "median": 0.0
+        },
+        "housework": {
+          "mean": 41.79682366844738,
+          "median": 20.0
+        },
+        "care": {
+          "mean": 0.34888290009986694,
+          "median": 0.0
+        },
+        "discretionary": {
+          "mean": 266.0128607261251,
+          "median": 230.0
+        }
+      }
+    },
+    {
+      "age_group": "19–24",
+      "status": 3,
+      "child": 0,
+      "diaries": 671,
+      "people": 443,
+      "mean": 364.87380002284556,
+      "median": 350,
+      "poor_rate": 0.13210668417645569,
+      "activities": {
+        "sleep": {
+          "mean": 498.8066944061319,
+          "median": 480.0
+        },
+        "personal": {
+          "mean": 216.3419533562826,
+          "median": 200.0
+        },
+        "work": {
+          "mean": 0.8920424289708808,
+          "median": 0.0
+        },
+        "commute": {
+          "mean": 0.19991006798343244,
+          "median": 0.0
+        },
+        "study": {
+          "mean": 304.8073151707645,
+          "median": 310.0
+        },
+        "jobsearch": {
+          "mean": 3.2376452339285033,
+          "median": 0.0
+        },
+        "housework": {
+          "mean": 49.90931865243402,
+          "median": 20.0
+        },
+        "care": {
+          "mean": 0.9313206606584374,
+          "median": 0.0
+        },
+        "discretionary": {
+          "mean": 364.87380002284556,
+          "median": 350.0
+        }
+      }
+    },
+    {
+      "age_group": "25–29",
+      "status": 1,
+      "child": 0,
+      "diaries": 1268,
+      "people": 835,
+      "mean": 234.2979841263344,
+      "median": 220,
+      "poor_rate": 0.21911132311805884,
+      "activities": {
+        "sleep": {
+          "mean": 464.22632042119693,
+          "median": 460.0
+        },
+        "personal": {
+          "mean": 211.39509248784643,
+          "median": 200.0
+        },
+        "work": {
+          "mean": 397.34967102718855,
+          "median": 440.0
+        },
+        "commute": {
+          "mean": 70.35516727361937,
+          "median": 60.0
+        },
+        "study": {
+          "mean": 18.076769733917274,
+          "median": 0.0
+        },
+        "jobsearch": {
+          "mean": 2.9729447719281,
+          "median": 0.0
+        },
+        "housework": {
+          "mean": 40.480915503911454,
+          "median": 20.0
+        },
+        "care": {
+          "mean": 0.8451346540574187,
+          "median": 0.0
+        },
+        "discretionary": {
+          "mean": 234.2979841263344,
+          "median": 220.0
+        }
+      }
+    },
+    {
+      "age_group": "25–29",
+      "status": 1,
+      "child": 1,
+      "diaries": 51,
+      "people": 36,
+      "mean": 207.90518852798394,
+      "median": 160,
+      "poor_rate": 0.3108865079830528,
+      "activities": {
+        "sleep": {
+          "mean": 492.1259743116566,
+          "median": 450.0
+        },
+        "personal": {
+          "mean": 206.05676395399294,
+          "median": 190.0
+        },
+        "work": {
+          "mean": 348.54112860973964,
+          "median": 400.0
+        },
+        "commute": {
+          "mean": 37.35566590035172,
+          "median": 30.0
+        },
+        "study": {
+          "mean": 4.696786639596904,
+          "median": 0.0
+        },
+        "jobsearch": {
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "housework": {
+          "mean": 56.775326118767694,
+          "median": 40.0
+        },
+        "care": {
+          "mean": 86.54316593791076,
+          "median": 80.0
+        },
+        "discretionary": {
+          "mean": 207.90518852798394,
+          "median": 160.0
+        }
+      }
+    },
+    {
+      "age_group": "25–29",
+      "status": 3,
+      "child": 0,
+      "diaries": 407,
+      "people": 266,
+      "mean": 370.2419871803477,
+      "median": 360,
+      "poor_rate": 0.13473992295498663,
+      "activities": {
+        "sleep": {
+          "mean": 506.8024851479161,
+          "median": 500.0
+        },
+        "personal": {
+          "mean": 216.00214471408623,
+          "median": 200.0
+        },
+        "work": {
+          "mean": 2.716374190744383,
+          "median": 0.0
+        },
+        "commute": {
+          "mean": 0.029080623842561455,
+          "median": 0.0
+        },
+        "study": {
+          "mean": 245.98244924561521,
+          "median": 180.0
+        },
+        "jobsearch": {
+          "mean": 13.771507950334945,
+          "median": 0.0
+        },
+        "housework": {
+          "mean": 81.94764368099075,
+          "median": 50.0
+        },
+        "care": {
+          "mean": 2.5063272661224687,
+          "median": 0.0
+        },
+        "discretionary": {
+          "mean": 370.2419871803477,
+          "median": 360.0
+        }
+      }
+    },
+    {
+      "age_group": "30–34",
+      "status": 1,
+      "child": 0,
+      "diaries": 1184,
+      "people": 774,
+      "mean": 217.51981526942907,
+      "median": 200,
+      "poor_rate": 0.27355327248853656,
+      "activities": {
+        "sleep": {
+          "mean": 463.5988769791838,
+          "median": 450.0
+        },
+        "personal": {
+          "mean": 208.70815625854058,
+          "median": 200.0
+        },
+        "work": {
+          "mean": 420.50855755408026,
+          "median": 450.0
+        },
+        "commute": {
+          "mean": 69.59849891756106,
+          "median": 60.0
+        },
+        "study": {
+          "mean": 10.000209525013375,
+          "median": 0.0
+        },
+        "jobsearch": {
+          "mean": 0.24310700159220097,
+          "median": 0.0
+        },
+        "housework": {
+          "mean": 46.30736416922577,
+          "median": 30.0
+        },
+        "care": {
+          "mean": 3.5154143253738637,
+          "median": 0.0
+        },
+        "discretionary": {
+          "mean": 217.51981526942907,
+          "median": 200.0
+        }
+      }
+    },
+    {
+      "age_group": "30–34",
+      "status": 1,
+      "child": 1,
+      "diaries": 233,
+      "people": 154,
+      "mean": 138.41708696977167,
+      "median": 110,
+      "poor_rate": 0.5896232732688652,
+      "activities": {
+        "sleep": {
+          "mean": 455.2151820245638,
+          "median": 450.0
+        },
+        "personal": {
+          "mean": 197.2741656399762,
+          "median": 180.0
+        },
+        "work": {
+          "mean": 408.37746940836536,
+          "median": 440.0
+        },
+        "commute": {
+          "mean": 63.97090746100331,
+          "median": 60.0
+        },
+        "study": {
+          "mean": 1.4949254791463866,
+          "median": 0.0
+        },
+        "jobsearch": {
+          "mean": 0.016501149631863683,
+          "median": 0.0
+        },
+        "housework": {
+          "mean": 55.324819573377695,
+          "median": 30.0
+        },
+        "care": {
+          "mean": 119.90894229416386,
+          "median": 90.0
+        },
+        "discretionary": {
+          "mean": 138.41708696977167,
+          "median": 110.0
+        }
+      }
+    },
+    {
+      "age_group": "30–34",
+      "status": 3,
+      "child": 0,
+      "diaries": 186,
+      "people": 126,
+      "mean": 392.3452432217144,
+      "median": 380,
+      "poor_rate": 0.100841249172948,
+      "activities": {
+        "sleep": {
+          "mean": 502.4619688611283,
+          "median": 490.0
+        },
+        "personal": {
+          "mean": 210.36796626818258,
+          "median": 190.0
+        },
+        "work": {
+          "mean": 3.134619509219936,
+          "median": 0.0
+        },
+        "commute": {
+          "mean": 0.09710717168662317,
+          "median": 0.0
+        },
+        "study": {
+          "mean": 157.1913609398256,
+          "median": 0.0
+        },
+        "jobsearch": {
+          "mean": 11.04044467944526,
+          "median": 0.0
+        },
+        "housework": {
+          "mean": 146.6935095598707,
+          "median": 130.0
+        },
+        "care": {
+          "mean": 16.66777978892658,
+          "median": 0.0
+        },
+        "discretionary": {
+          "mean": 392.3452432217144,
+          "median": 380.0
+        }
+      }
+    },
+    {
+      "age_group": "30–34",
+      "status": 3,
+      "child": 1,
+      "diaries": 133,
+      "people": 90,
+      "mean": 207.56790239466807,
+      "median": 180,
+      "poor_rate": 0.31577030950673063,
+      "activities": {
+        "sleep": {
+          "mean": 487.1284893243776,
+          "median": 480.0
+        },
+        "personal": {
+          "mean": 173.23975652675446,
+          "median": 150.0
+        },
+        "work": {
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "commute": {
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "study": {
+          "mean": 16.32138737257042,
+          "median": 0.0
+        },
+        "jobsearch": {
+          "mean": 1.0426445552035477,
+          "median": 0.0
+        },
+        "housework": {
+          "mean": 201.6200522293292,
+          "median": 190.0
+        },
+        "care": {
+          "mean": 353.079767597097,
+          "median": 350.0
+        },
+        "discretionary": {
+          "mean": 207.56790239466807,
+          "median": 180.0
+        }
+      }
+    }
+  ],
+  "sensitivity": [
+    {
+      "median_share": 0.5,
+      "cutoff_min": 115.0,
+      "group": "all",
+      "diaries": 4920,
+      "persons": 3255,
+      "poverty_rate": 0.17278858654453932,
+      "bootstrap_ci_low": 0.149910516168508,
+      "bootstrap_ci_high": 0.1848343628190545,
+      "lack": 0.27869677136350246,
+      "fatigue": 0.29718318517783604,
+      "leisure_dissatisfaction": 0.19863937929746817,
+      "life_dissatisfaction": 0.1275215265918309
+    },
+    {
+      "median_share": 0.6,
+      "cutoff_min": 138.0,
+      "group": "all",
+      "diaries": 4920,
+      "persons": 3255,
+      "poverty_rate": 0.22512223062098613,
+      "bootstrap_ci_low": 0.2107605645261461,
+      "bootstrap_ci_high": 0.24538328674960463,
+      "lack": 0.27869677136350246,
+      "fatigue": 0.29718318517783604,
+      "leisure_dissatisfaction": 0.19863937929746817,
+      "life_dissatisfaction": 0.1275215265918309
+    },
+    {
+      "median_share": 0.7,
+      "cutoff_min": 161.0,
+      "group": "all",
+      "diaries": 4920,
+      "persons": 3255,
+      "poverty_rate": 0.30752736747188425,
+      "bootstrap_ci_low": 0.2848318021769339,
+      "bootstrap_ci_high": 0.3214229135576306,
+      "lack": 0.27869677136350246,
+      "fatigue": 0.29718318517783604,
+      "leisure_dissatisfaction": 0.19863937929746817,
+      "life_dissatisfaction": 0.1275215265918309
+    }
+  ],
+  "validation": {
+    "auc": 0.6376065588509126,
+    "brier": 0.16562757135786443,
+    "null_brier": 0.17444221190121767,
+    "calibration_intercept": -0.08999319585676223,
+    "calibration_slope": 0.9253674378578962,
+    "fold_auc": [
+      0.6342789231239493,
+      0.6240606740450931,
+      0.6360894480504922,
+      0.6676165825844436,
+      0.639104972007307
+    ],
+    "training_only_auc": [
+      0.6342789231239493,
+      0.6240606740450931,
+      0.6360894480504922,
+      0.6676165825844436,
+      0.639104972007307
+    ]
+  },
+  "signal_type_benchmarks": {
+    "complex": 7.485021577500076,
+    "overwork": 3.0027170685625175,
+    "sleep": 19.12265725457814,
+    "discretionary": 16.172064429906747,
+    "none": 54.21753966945253
+  }
+}

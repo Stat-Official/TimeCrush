@@ -1,0 +1,7 @@
+﻿region,category,policies
+ALL,care,2
+ALL,sleep,2
+ALL,study,3
+ALL,work,1
+단지별,commute,1
+참여 지자체,commute,1
