@@ -1,5 +1,5 @@
 # ⏳ TimeCrush: 하루의 여백 · 청년 시간 진단
-<img width="1470" height="802" alt="image" src="https://github.com/user-attachments/assets/910f550b-41a4-4bdd-bbee-8ce8f48f63cd" />
+<img width="1470" height="775" alt="image" src="https://github.com/user-attachments/assets/996a8d8b-1aae-4ad6-b3a8-2de88edbeb8e" />
 
 **🕰️ 2024 생활시간조사로 청년의 하루를 재량시간 중심으로 진단하고, 비교·재배분·정책 탐색까지 연결합니다.**
 
@@ -54,7 +54,7 @@ matplotlib>=3.8,<4
 |:---:|:---:|:---:|:---:|:---:|:---:|
 | <img src="https://github.com/tellgeniewish.png" width="80"/> | <img src="https://github.com/espritreve.png" width="80"/> | <img src="https://github.com/baezzangKK.png" width="80"/> | <img src="https://github.com/eunnbiin.png" width="80"/> | <img src="https://github.com/jhsonhui.png" width="80"/> | <img src="https://github.com/minminkim29.png" width="80"/> |
 | [@tellgeniewish](https://github.com/tellgeniewish) | [@espritreve](https://github.com/espritreve) | [@baezzangKK](https://github.com/baezzangKK) | [@eunnbiin](https://github.com/eunnbiin) | [@jhsonhui](https://github.com/jhsonhui) | [@minminkim29](https://github.com/minminkim29) |
-| 팀장 · 프로젝트 총괄·기획·개발 | 아이디어 원작자·프로젝트 기획 | 프로젝트 기획 | 프로젝트 기획 | 프로젝트 기획 | 프로젝트 기획 |
+| 팀장 · 프로젝트 총괄·기획·개발 | 아이디어 원작자·프로젝트 기획 | 프로젝트 기획·개발 | 프로젝트 기획·개발 | 프로젝트 기획 | 프로젝트 기획 |
 
 ## 🗃️ 활용 데이터
 
