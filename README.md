@@ -1,4 +1,4 @@
-# ⏳ TimeCrush: 하루의 여백 · 청년 시간 진단
+# ⏳ TimeCrush: 하루의 여백 · 청년 시간 빈곤 진단
 <img width="1470" height="775" alt="image" src="https://github.com/user-attachments/assets/996a8d8b-1aae-4ad6-b3a8-2de88edbeb8e" />
 
 **🕰️ 2024 생활시간조사로 청년의 하루를 재량시간 중심으로 진단하고, 비교·재배분·정책 탐색까지 연결합니다.**
