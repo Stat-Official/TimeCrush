@@ -250,7 +250,7 @@ function balance(){
   $('balance').classList.toggle('warning',!ready);
   $('diagnose').disabled=!ready;
 }
-function show(step,scrollToNav=true){
+function show(step,scrollToNav=true,focusHeading=true){
   if(step>0&&!record) return;
   displayStep=step;
   document.querySelectorAll('.panel').forEach((p,i)=>p.hidden=i!==step);
@@ -260,7 +260,9 @@ function show(step,scrollToNav=true){
   });
   const panel=$('p'+step);
   const heading=panel.querySelector('h2');
-  heading.focus({preventScroll:true});
+  if(focusHeading){
+    heading.focus({preventScroll:true});
+  }
   if(scrollToNav){
     requestAnimationFrame(()=>{
       const main=document.querySelector('main');
@@ -270,7 +272,10 @@ function show(step,scrollToNav=true){
   }
 }
 function invalidate(){
-  if(record&&displayStep===0){record=null;show(0,false);}
+  if(record&&displayStep===0){
+    record=null;
+    show(0,false,false);
+  }
   balance();
 }
 function signalState(time,weekly,sleep){
