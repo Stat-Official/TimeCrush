@@ -117,7 +117,7 @@ details{margin-top:28px;border-top:1px solid var(--ink);padding-top:18px}summary
 <div class="profile-band">
 <p class="form-kicker" aria-hidden="true">01 / PROFILE</p>
 <div class="profile-grid" id="personalFields">
-<label class="field">만 나이<select id="age"></select></label>
+<label class="field">만 나이<select id="age" required></select></label>
 <label class="field">경제활동<select id="status"><option value="1">취업 중</option><option value="3">미취업</option></select></label>
 <label class="field">미취학 자녀<select id="child"><option value="0">없음</option><option value="1">있음</option><option value="">응답하지 않음</option></select></label>
 <label class="field weekly-field">평소 주당 근로시간 (시간)<input id="weekly" name="yt-weekly-hours" type="number" min="0" max="168" step="any" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" data-1p-ignore="true" data-lpignore="true"><small>주업과 부업을 합산합니다. 비워 두면 입력한 평일 근로시간 × 5로 자동 계산합니다.</small></label>
@@ -168,7 +168,7 @@ details{margin-top:28px;border-top:1px solid var(--ink);padding-top:18px}summary
 </main>
 <footer class="footer wrap">
   <div class="footer-left"><a href="https://www.mods.go.kr/board.es?act=view&bid=220&list_no=437764&mid=a10301060100">국가데이터처 2024년 생활시간조사</a></div>
-  <div class="footer-center">TIMECRUSH · BY 국가데이터처 청년인턴 1팀 STAT-OFFICIAL</div>
+  <div class="footer-center"><a href="https://github.com/Stat-Official/TimeCrush" target="_blank" rel="noopener noreferrer">TIMECRUSH↗</a> · BY 국가데이터처 청년인턴 1팀 <a href="https://github.com/Stat-Official" target="_blank" rel="noopener noreferrer"><strong>STAT-OFFICIAL</strong>↗</a></div>
   <div class="footer-right">분석과 정책 정보는 연구·탐색용</div>
 </footer>
 <script type="application/json" id="data">__PAYLOAD__</script>
@@ -215,8 +215,9 @@ $('sliders').innerHTML=sliders.map(([key,label])=>'<label class="slider-row" for
   '<span class="slider-track"><input type="range" id="sim-'+key+'" aria-label="'+label+' 시간 조정" min="-'+sliderRange+'" max="'+sliderRange+'" value="0" step="1"></span>'+
   '<span class="slider-scale" aria-hidden="true"><span>−'+sliderRange+'분</span><span>0 · 입력값</span><span>+'+sliderRange+'분</span></span></label>').join('');
 $('heroSample').textContent='만 19–34세 · 평일 일지 '+fmt.format(data.benchmark.diaries)+'건';
+$('age').add(new Option('나이를 선택하세요',''));
 for(let a=19;a<=34;a++) $('age').add(new Option(a+'세',a));
-$('age').value='27';
+$('age').value='';
 $('times').innerHTML=inputActivities.map(([key,label])=>'<label class="field">'+label+'<span class="time-inputs"><input required type="number" id="'+key+'-hours" name="yt-'+key+'-hours" min="0" max="24" step="1" value="0" inputmode="numeric" autocomplete="off" autocorrect="off" spellcheck="false" data-1p-ignore="true" data-lpignore="true" aria-label="'+label+' 시간"><span class="time-unit">시간</span><input required type="number" id="'+key+'-minutes" name="yt-'+key+'-minutes" min="0" max="59" step="1" value="0" inputmode="numeric" autocomplete="off" autocorrect="off" spellcheck="false" data-1p-ignore="true" data-lpignore="true" aria-label="'+label+' 분"><span class="time-unit">분</span></span></label>').join('')+'<div class="field auto-field"><span>재량시간</span><output class="auto-time" id="discretionary-display">24시간 00분</output><small>1,440분에서 나머지 행동시간을 뺀 값이 자동으로 계산됩니다.</small></div>';
 function readActivity(key){
   const h=$(key+'-hours').valueAsNumber,m=$(key+'-minutes').valueAsNumber;
@@ -245,8 +246,8 @@ function balance(){
   $('discretionary-display').textContent=remaining>=0?clockMins(remaining):'0시간 00분';
   const weekly=$('weekly').value===''?null:$('weekly').valueAsNumber;
   const validWeekly=!$('weekly').validity.badInput&&(weekly===null||Number.isFinite(weekly)&&weekly>=0&&weekly<=168);
-  const ready=valid&&validWeekly&&remaining>=0;
-  $('balance').textContent=!validWeekly?'주당 근로시간은 0~168시간으로 입력해 주세요.':!valid?'행동시간은 시간 0~24, 분 0~59 범위로 입력해 주세요.':remaining<0?'입력한 행동시간이 하루 24시간을 '+mins(Math.abs(remaining))+' 초과했어요.':'재량시간 '+clockMins(remaining)+' · 하루 24시간이 자동으로 맞춰졌어요.';
+  const ready=valid&&validWeekly&&remaining>=0&&$('age').value!=='';
+  $('balance').textContent=$('age').value===''?'만 나이를 선택해 주세요.':!validWeekly?'주당 근로시간은 0~168시간으로 입력해 주세요.':!valid?'행동시간은 시간 0~24, 분 0~59 범위로 입력해 주세요.':remaining<0?'입력한 행동시간이 하루 24시간을 '+mins(Math.abs(remaining))+' 초과했어요.':'재량시간 '+clockMins(remaining)+' · 하루 24시간이 자동으로 맞춰졌어요.';
   $('balance').classList.toggle('warning',!ready);
   $('diagnose').disabled=!ready;
 }
